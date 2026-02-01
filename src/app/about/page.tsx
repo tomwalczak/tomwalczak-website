@@ -1,13 +1,5 @@
 import Image from "next/image";
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-
-const socialLinks = [
-  { name: "GitHub", href: "https://github.com/tomwalczak", icon: Github },
-  { name: "Twitter", href: "https://x.com/tom_walchak", icon: Twitter },
-  { name: "LinkedIn", href: "https://linkedin.com/in/tom-walczak", icon: Linkedin },
-  { name: "Email", href: "mailto:tom@tomwalczak.com", icon: Mail },
-];
 
 export default function AboutPage() {
   return (
@@ -15,51 +7,31 @@ export default function AboutPage() {
       <article className="prose prose-neutral dark:prose-invert max-w-none">
         <h1 className="text-4xl font-bold mb-8">About</h1>
         
-        <div className="flex items-center gap-6 mb-8 not-prose">
+        <div className="flex flex-col md:flex-row gap-8 mb-8 not-prose">
           <Image
-            src="/profile.jpg"
+            src="/route66.jpeg"
             alt="Tom Walczak"
-            width={96}
-            height={96}
-            className="rounded-full shrink-0"
+            width={320}
+            height={320}
+            className="rounded-lg shrink-0 object-cover"
+            style={{ aspectRatio: "1/1" }}
             priority
           />
-          <div>
-            <h2 className="text-2xl font-bold">Hi, I&apos;m Tom</h2>
-            <p className="text-muted-foreground">
-              Building verifiable, truth-seeking AI agents
+          <div className="flex flex-col justify-center">
+            <p className="text-lg mb-4">
+              I&apos;m building verifiable, truth-seeking AI agents — systems that stress-test 
+              their own outputs on complex, controversial topics.
             </p>
-            <div className="flex gap-3 mt-3">
-              {socialLinks.map((link) => {
-                const Icon = link.icon;
-                return (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    target={link.href.startsWith("http") ? "_blank" : undefined}
-                    rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                    aria-label={link.name}
-                  >
-                    <Icon className="h-5 w-5" />
-                  </a>
-                );
-              })}
-            </div>
+            <p className="text-muted-foreground mb-4">
+              I&apos;m an AI Engineer based in London. My background is in computer science, 
+              startups, and product management. I&apos;m especially interested in the intersection 
+              of epistemology and AI.
+            </p>
+            <p className="text-muted-foreground">
+              Currently: Head of AI at Alex Epstein.
+            </p>
           </div>
         </div>
-
-        <p>
-          I&apos;m an AI Engineer based in London, UK. I work with a small team of engineers and designers 
-          to build AI-first products and prototypes.
-        </p>
-
-        <p>
-          I am interested in building AI products and tools that can help us understand complex and 
-          contentious topics — energy and climate, AI risk, and others. I have a background in computer 
-          science, startups, and product management. I am especially interested in the intersection 
-          of epistemology and computer science.
-        </p>
 
         <Separator className="my-8" />
 
@@ -124,11 +96,7 @@ export default function AboutPage() {
         <h2>Connect</h2>
         <p>
           If you&apos;d like to discuss any sort of opportunity, or just chat about AI, feel free to 
-          reach out through any of the links above.
-        </p>
-
-        <p className="text-muted-foreground text-sm">
-          Currently: Head of AI at Alex Epstein | AI Consultant
+          reach out through any of the links in the header.
         </p>
       </article>
     </div>

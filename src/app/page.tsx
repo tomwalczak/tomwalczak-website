@@ -37,12 +37,12 @@ export default function Home() {
     <div className="container max-w-4xl mx-auto px-4 py-16">
       {/* Hero Section */}
       <section className="mb-16">
-        <div className="flex items-center gap-4 mb-6">
+        <div className="flex items-center gap-6 mb-6">
           <Image
             src="/profile.jpg"
             alt="Tom Walczak"
-            width={80}
-            height={80}
+            width={120}
+            height={120}
             className="rounded-full"
             priority
           />
