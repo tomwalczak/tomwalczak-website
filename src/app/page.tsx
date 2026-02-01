@@ -1,65 +1,168 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Github, Twitter, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+
+const socialLinks = [
+  { name: "GitHub", href: "https://github.com/tomwalczak", icon: Github },
+  { name: "Twitter", href: "https://x.com/tom_walchak", icon: Twitter },
+  { name: "LinkedIn", href: "https://linkedin.com/in/tom-walczak", icon: Linkedin },
+  { name: "Email", href: "mailto:tom@tomwalczak.com", icon: Mail },
+];
+
+const featuredPosts = [
+  {
+    title: "Demis Hassabis Is Wrong About Computability",
+    description: "The word \"computable\" is doing a ridiculous amount of hidden work in AI debates",
+    date: "Jan 9, 2026",
+    slug: "demis-hassabis-is-wrong-about-computability",
+  },
+  {
+    title: "What 200+ AI Debates Taught Me About Truth-Finding",
+    description: "How to find truth in the age of \"podcastistan\"",
+    date: "Jun 26, 2025",
+    slug: "what-200-ai-debates-taught-me-about-truth-finding",
+  },
+  {
+    title: "AI is Like Waking Up with $100 Million in the Bank",
+    description: "So you have a superpower, now what?",
+    date: "Jun 16, 2025",
+    slug: "ai-is-like-waking-up-with-100-million",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="container max-w-4xl mx-auto px-4 py-16">
+      {/* Hero Section */}
+      <section className="mb-16">
+        <div className="flex items-center gap-4 mb-6">
+          <div className="h-20 w-20 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-3xl font-bold text-white">
+            TW
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">Hi, I&apos;m Tom</h1>
+            <p className="text-muted-foreground">London, UK</p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        
+        <p className="text-xl text-muted-foreground mb-6">
+          Building verifiable, truth-seeking AI agents
+        </p>
+        
+        <blockquote className="border-l-2 border-primary pl-4 text-muted-foreground mb-8">
+          Current AI gives plausible-sounding answers but no assurance those answers have been stress-tested. 
+          I&apos;m building AI agents that verify their own outputs on complex, controversial topics — 
+          surfacing counter-arguments, weighing logic, and showing what was examined.
+        </blockquote>
+
+        <div className="flex items-center gap-3">
+          {socialLinks.map((link) => {
+            const Icon = link.icon;
+            return (
+              <Button key={link.name} variant="outline" size="icon" asChild>
+                <a
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  aria-label={link.name}
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              </Button>
+            );
+          })}
         </div>
-      </main>
+      </section>
+
+      {/* What I'm Building Section */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-6">What I&apos;m Building</h2>
+        
+        <div className="space-y-8">
+          <div className="border border-border rounded-lg p-6">
+            <div className="flex items-center gap-2 mb-2">
+              <h3 className="text-xl font-semibold">Open Debate</h3>
+              <Badge variant="secondary">Open Source</Badge>
+            </div>
+            <p className="text-muted-foreground mb-4">
+              An AI debate system for stress-testing arguments. AI can get very good at presenting, 
+              challenging, and evaluating reasoning. Bad arguments are built on weak foundations. 
+              When pressed, they fall apart.
+            </p>
+            <ul className="text-sm text-muted-foreground space-y-1 mb-4">
+              <li>• Recursive self-improvement for AI debaters</li>
+              <li>• Vanilla baseline configuration for surfacing model bias</li>
+              <li>• Human-in-the-loop coaching mode</li>
+              <li>• CLI-first, integrates with Claude Code for analysis</li>
+            </ul>
+            <Button variant="outline" size="sm" asChild>
+              <a href="https://open-debate.ai" target="_blank" rel="noopener noreferrer">
+                Coming soon <ExternalLink className="ml-2 h-3 w-3" />
+              </a>
+            </Button>
+          </div>
+
+          <div className="border border-border rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">AlexAI</h3>
+            <p className="text-muted-foreground mb-4">
+              Conversational AI embodying energy expert Alex Epstein&apos;s thinking. A production AI system 
+              that captures and communicates ideas from Fossil Future and The Moral Case for Fossil Fuels.
+            </p>
+            <ul className="text-sm text-muted-foreground space-y-1 mb-4">
+              <li>• 900+ indexed sound bites, timeless principles</li>
+              <li>• AlexAI Pro — Research-oriented tool with stricter guardrails</li>
+              <li>• Commentary Engine — AI-powered news analysis</li>
+            </ul>
+            <Button variant="outline" size="sm" asChild>
+              <a href="https://alexepstein.ai" target="_blank" rel="noopener noreferrer">
+                Try AlexAI <ExternalLink className="ml-2 h-3 w-3" />
+              </a>
+            </Button>
+          </div>
+
+          <div className="border border-border rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">Blumberg AI</h3>
+            <p className="text-muted-foreground mb-4">
+              AI consulting for Blumberg Capital portfolio companies. Building custom AI solutions 
+              for venture-backed startups.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Recent Writing Section */}
+      <section className="mb-16">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold">Recent Writing</h2>
+          <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            View all →
+          </Link>
+        </div>
+        
+        <div className="space-y-6">
+          {featuredPosts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="block group"
+            >
+              <article className="border-b border-border pb-6 last:border-0">
+                <h3 className="text-lg font-semibold group-hover:text-primary transition-colors mb-1">
+                  {post.title}
+                </h3>
+                <p className="text-muted-foreground text-sm mb-2">{post.description}</p>
+                <time className="text-xs text-muted-foreground">{post.date}</time>
+              </article>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Current Role */}
+      <section className="text-center text-muted-foreground">
+        <p>Head of AI at Alex Epstein | AI Consultant</p>
+      </section>
     </div>
   );
 }
