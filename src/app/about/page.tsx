@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -15,9 +16,14 @@ export default function AboutPage() {
         <h1 className="text-4xl font-bold mb-8">About</h1>
         
         <div className="flex items-center gap-6 mb-8 not-prose">
-          <div className="h-24 w-24 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-4xl font-bold text-white shrink-0">
-            TW
-          </div>
+          <Image
+            src="/profile.jpg"
+            alt="Tom Walczak"
+            width={96}
+            height={96}
+            className="rounded-full shrink-0"
+            priority
+          />
           <div>
             <h2 className="text-2xl font-bold">Hi, I&apos;m Tom</h2>
             <p className="text-muted-foreground">

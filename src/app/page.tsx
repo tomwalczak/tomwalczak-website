@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Github, Twitter, Linkedin, Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -37,9 +38,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="mb-16">
         <div className="flex items-center gap-4 mb-6">
-          <div className="h-20 w-20 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-3xl font-bold text-white">
-            TW
-          </div>
+          <Image
+            src="/profile.jpg"
+            alt="Tom Walczak"
+            width={80}
+            height={80}
+            className="rounded-full"
+            priority
+          />
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Hi, I&apos;m Tom</h1>
             <p className="text-muted-foreground">London, UK</p>
