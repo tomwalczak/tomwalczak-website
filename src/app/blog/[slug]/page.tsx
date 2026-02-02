@@ -5,6 +5,7 @@ import { remark } from "remark";
 import html from "remark-html";
 import { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { ArrowLeft, Twitter, Linkedin, Link as LinkIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -37,14 +38,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${post.title} | Tom Walczak`,
+    title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
       publishedTime: post.date,
       authors: ["Tom Walczak"],
+      url: `https://tomwalczak.com/blog/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -70,8 +75,36 @@ export default async function BlogPost({ params }: Props) {
 
   const contentHtml = await markdownToHtml(post.content);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: "Tom Walczak",
+      url: "https://tomwalczak.com",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Tom Walczak",
+      url: "https://tomwalczak.com",
+    },
+    url: `https://tomwalczak.com/blog/${slug}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://tomwalczak.com/blog/${slug}`,
+    },
+  };
+
   return (
     <>
+      <Script
+        id="article-json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ReadingProgress />
       <article className="container max-w-3xl mx-auto px-4 py-16">
         <Link

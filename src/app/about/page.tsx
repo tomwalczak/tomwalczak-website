@@ -1,5 +1,14 @@
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | Tom Walczak",
+  description: "AI Engineer based in London. Building verifiable, truth-seeking AI agents. Background in computer science, startups, and product management.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function AboutPage() {
   return (

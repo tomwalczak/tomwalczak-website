@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tomwalczak.com/sitemap.xml
+
+# LLM-friendly content
+# See https://llmstxt.org for the llms.txt specification
+# https://tomwalczak.com/llms.txt

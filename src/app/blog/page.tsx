@@ -2,8 +2,11 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 
 export const metadata = {
-  title: "Blog | Tom Walczak",
+  title: "Blog",
   description: "Writing about AI, truth-seeking, and building verifiable AI agents.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 function formatDate(dateString: string): string {

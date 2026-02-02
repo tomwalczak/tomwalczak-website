@@ -3,6 +3,28 @@ import Image from "next/image";
 import { Github, Twitter, Linkedin, Mail, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Script from "next/script";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Tom Walczak",
+  url: "https://tomwalczak.com",
+  image: "https://tomwalczak.com/profile.jpg",
+  jobTitle: "AI Engineer",
+  worksFor: {
+    "@type": "Organization",
+    name: "Alex Epstein",
+  },
+  description: "Building verifiable, truth-seeking AI agents",
+  sameAs: [
+    "https://github.com/tomwalczak",
+    "https://x.com/tom_walchak",
+    "https://linkedin.com/in/tom-walczak",
+    "https://tomwalczak.substack.com",
+  ],
+  knowsAbout: ["Artificial Intelligence", "AI Agents", "Machine Learning", "Debate Systems", "Fact-checking"],
+};
 
 // Custom Substack icon (Lucide doesn't have one)
 const Substack = ({ className }: { className?: string }) => (
@@ -52,8 +74,14 @@ const featuredPosts = [
 
 export default function Home() {
   return (
-    <div className="container max-w-4xl mx-auto px-4 py-16">
-      {/* Hero Section */}
+    <>
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="container max-w-4xl mx-auto px-4 py-16">
+        {/* Hero Section */}
       <section className="mb-16">
         <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-8 mb-8">
           <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shrink-0">
@@ -152,16 +180,16 @@ export default function Home() {
               <Badge variant="secondary">Open Source</Badge>
             </div>
             <p className="text-muted-foreground mb-4">
-              An AI debate system for stress-testing arguments. AI can get very
-              good at presenting, challenging, and evaluating reasoning. Bad
-              arguments are built on weak foundations. When pressed, they fall
-              apart.
+              An AI debate arena where language models argue opposing viewpoints,
+              get judged, and learn from their losses. Run debates that would
+              never happen IRL — people who refuse to engage, won&apos;t share a
+              stage, or are ideologically incompatible.
             </p>
             <ul className="text-sm text-muted-foreground space-y-1 mb-4">
-              <li>• Recursive self-improvement for AI debaters</li>
-              <li>• Vanilla baseline configuration for surfacing model bias</li>
+              <li>• Recursive self-improvement — debaters reflect and evolve between rounds</li>
+              <li>• Minimal &quot;vanilla&quot; prompts to surface raw model behavior</li>
               <li>• Human-in-the-loop coaching mode</li>
-              <li>• CLI-first, integrates with Claude Code for analysis</li>
+              <li>• CLI-first, designed for experimentation</li>
             </ul>
             <Button variant="outline" size="sm" asChild>
               <a
@@ -280,6 +308,7 @@ export default function Home() {
       <section className="text-center text-muted-foreground">
         <p>Head of AI at Alex Epstein | AI Consultant</p>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
