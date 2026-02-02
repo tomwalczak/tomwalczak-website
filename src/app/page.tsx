@@ -175,6 +175,32 @@ export default function Home() {
           </div>
 
           <div className="border border-border rounded-lg p-6">
+            <div className="flex items-center gap-2 mb-2">
+              <h3 className="text-xl font-semibold">Argument Analyzer</h3>
+              <Badge variant="secondary">Open Source</Badge>
+            </div>
+            <p className="text-muted-foreground mb-4">
+              Real-time argument analysis as you write. Two AI agents work in
+              the background: Steelman surfaces the strongest version of your
+              argument, Counter shows the objections your opponents will raise.
+            </p>
+            <ul className="text-sm text-muted-foreground space-y-1 mb-4">
+              <li>• Feedback appears as you write, no button to click</li>
+              <li>• Click feedback to jump to the relevant passage</li>
+              <li>• Chat assistant for improving specific sections</li>
+            </ul>
+            <Button variant="outline" size="sm" asChild>
+              <a
+                href="https://github.com/tomwalczak/realtime-argument-analyzer"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub <ExternalLink className="ml-2 h-3 w-3" />
+              </a>
+            </Button>
+          </div>
+
+          <div className="border border-border rounded-lg p-6">
             <h3 className="text-xl font-semibold mb-2">AlexAI</h3>
             <p className="text-muted-foreground mb-4">
               Conversational AI embodying energy expert Alex Epstein&apos;s
