@@ -1,7 +1,7 @@
 ---
 title: "Making Policy Costs Personal With AI"
 description: "People support bad policies—until they learn what they'll personally pay"
-date: "May 25, 2025"
+date: "2025-05-25"
 ---
 
 Most people want the government to fight climate change. But when asked how much they'd personally pay, the vast majority cap it at £25 per month.
@@ -14,6 +14,11 @@ This is just one striking example of a policy voters would never support if they
 
 I'm building an AI-powered dashboard that bridges this gap between policy support and policy costs, starting with UK energy policy. Energy and climate are a natural starting point because of my work on AlexAI, an energy and climate expert AI for Alex Epstein.
 
+**Check out the work-in-progress:** [policy-impact.uk](https://policy-impact.uk/)
+
+![Policy Impact Dashboard Screenshot](/images/posts/placeholder.svg)
+*[View dashboard screenshot on Substack →](https://tomwalczak.substack.com/p/making-policy-costs-personal-with)*
+
 Using credible explanations grounded in facts, AI can help voters understand whether the policies they support align with their values — or rethink their values if they find that the cost-benefit doesn't add up!
 
 ## Here is how it works
@@ -23,6 +28,9 @@ At the top of the website, there are a few hard-hitting stats and tangible impac
 Further down, a news feed features energy-focused stories, each with suggested actions citizens can take – like emailing their MP, posting on social media, or filing a regulatory complaint.
 
 AI is really good at drafting high-quality emails, but here's the key feature — the AI first generates the draft after the user selects which personalized talking points to emphasize.
+
+![News feed demo](/images/posts/placeholder.svg)
+*[View demo GIFs on Substack →](https://tomwalczak.substack.com/p/making-policy-costs-personal-with)*
 
 The project is still in an experimental stage and many details may change in the coming weeks/months!
 

@@ -6,6 +6,15 @@ export const metadata = {
   description: "Writing about AI, truth-seeking, and building verifiable AI agents.",
 };
 
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
+
 export default function BlogPage() {
   const posts = getAllPosts();
 
@@ -24,7 +33,7 @@ export default function BlogPage() {
             className="block group"
           >
             <article className="border-b border-border pb-8 last:border-0">
-              <time className="text-sm text-muted-foreground">{post.date}</time>
+              <time className="text-sm text-muted-foreground">{formatDate(post.date)}</time>
               <h2 className="text-xl font-semibold mt-1 mb-2 group-hover:text-primary transition-colors">
                 {post.title}
               </h2>

@@ -8,6 +8,15 @@ import Link from "next/link";
 import { ArrowLeft, Twitter, Linkedin, Link as LinkIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -74,7 +83,7 @@ export default async function BlogPost({ params }: Props) {
         </Link>
 
         <header className="mb-12">
-          <time className="text-sm text-muted-foreground">{post.date}</time>
+          <time className="text-sm text-muted-foreground">{formatDate(post.date)}</time>
           <h1 className="text-4xl font-bold mt-2 mb-4">{post.title}</h1>
           <p className="text-xl text-muted-foreground">{post.description}</p>
         </header>

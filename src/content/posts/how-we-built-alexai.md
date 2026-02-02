@@ -1,7 +1,7 @@
 ---
 title: "How We Built AlexAI: The World's Top AI Energy and Climate Expert"
 description: "How AI can help make sense of complex and contentious debates by generating clear explanations"
-date: "Dec 12, 2023"
+date: "2023-12-12"
 ---
 
 Over the past few years, I've been working on AI tools that help us make sense of complex, contentious, and consequential issues. I believe that better tools will help us think about difficult subjects more clearly, leading to better decisions and faster progress in the real world.
@@ -9,6 +9,9 @@ Over the past few years, I've been working on AI tools that help us make sense o
 While we're not yet at the point when we can build an end-to-end knowledge system using AI, we can focus on what the current AI does best—taking existing high-quality sources and generating clear explanations.
 
 ## Making Sense of Climate Change and Energy With AlexAI
+
+![AlexAI Interface](/images/posts/placeholder.svg)
+*[View AlexAI screenshots and architecture diagrams on Substack →](https://tomwalczak.substack.com/p/how-we-built-alexai-the-worlds-top)*
 
 The debate around climate change and energy is one of those complex and contentious issues.
 

@@ -1,8 +1,21 @@
 import Link from "next/link";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
+// Custom Substack icon
+const Substack = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+  </svg>
+);
+
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/tomwalczak", icon: Github },
+  { name: "Substack", href: "https://tomwalczak.substack.com", icon: Substack },
   { name: "Twitter", href: "https://x.com/tom_walchak", icon: Twitter },
   { name: "LinkedIn", href: "https://linkedin.com/in/tom-walczak", icon: Linkedin },
   { name: "Email", href: "mailto:tom@tomwalczak.com", icon: Mail },

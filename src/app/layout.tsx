@@ -11,6 +11,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tomwalczak.com"),
   title: "Tom Walczak | Building verifiable, truth-seeking AI agents",
   description: "AI Engineer based in London. Building AI agents that verify their own outputs on complex, controversial topics.",
   openGraph: {

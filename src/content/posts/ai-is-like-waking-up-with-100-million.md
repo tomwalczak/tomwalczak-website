@@ -1,10 +1,13 @@
 ---
 title: "AI is Like Waking Up with $100 Million in the Bank"
 description: "So you have a superpower, now what?"
-date: "Jun 16, 2025"
+date: "2025-06-16"
 ---
 
 I've found the best way to understand the impact of AI is to think of it like waking up with $100 million in your bank account.
+
+![Illustration](/images/posts/placeholder.svg)
+*[View original image on Substack →](https://tomwalczak.substack.com/p/ai-is-like-waking-up-with-100-million)*
 
 No doubt, $100 million instantly solves a lot of problems—specifically, the kind of problems for which there is a money-shaped solution. If you've been worried about rent, medical bills, debt, or tuition, those problems simply vanish.
 

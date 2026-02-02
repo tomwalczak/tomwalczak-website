@@ -1,7 +1,7 @@
 ---
 title: "What 200+ AI Debates Taught Me About Truth-Finding"
 description: "How to find truth in the age of \"podcastistan\""
-date: "Jun 26, 2025"
+date: "2025-06-26"
 ---
 
 Over the past year, I've been building an AI debate system. Not as a novelty or demo, but as a serious attempt to answer a question: can AI help us find truth on complex, contentious topics?

@@ -1,7 +1,7 @@
 ---
 title: "OpenAI's o3 and the Problem of Induction: AI Doesn't Learn Like Humans (Yet)"
 description: "What If It Could?"
-date: "Jan 4, 2025"
+date: "2025-01-04"
 ---
 
 Can AI learn like humans—forming causal models and leaping beyond its training data to discover genuinely new insights? Despite exciting milestones, I argue that current models, including OpenAI's o3, are still limited by a 'shallow' form of induction. Here's why.
@@ -37,6 +37,9 @@ In short, while AI learns patterns, humans actively test and refine theories.
 ## Why o3 Is Significant
 
 That's why OpenAI's new o3 model scoring 87.5% on the Abstraction and Reasoning Corpus (ARC) is so impressive. The ARC test is set up like a series of puzzles: you get a small number of examples, and you have to generalize the hidden rule to tackle a fresh puzzle. Crucially, the ARC test is designed to be resistant to memorization - the puzzles are unique enough that the AI would not have seen them during training and has to innovate solutions on-the-fly. ARC is designed to be easy for humans, but hard for AI. Most previous models, even powerful ones, only managed around 20%, so nearly 88% is huge.
+
+![ARC puzzle example](/images/posts/placeholder.svg)
+*Example puzzle from the ARC test — [View on Substack →](https://tomwalczak.substack.com/p/openais-o3-and-the-problem-of-induction)*
 
 To make sense of it, I like to compare GPT-4 to someone who thinks "off the cuff." It responds in a single pass without much behind-the-scenes deliberation. The "reasoning models", on the other hand, are more like someone who jots down a few different ideas in a private notebook and then picks the best one. This approach is closer to what we call "System Two" thinking in humans—a more careful, step-by-step way of reasoning.
 
