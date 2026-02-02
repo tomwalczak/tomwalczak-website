@@ -55,8 +55,8 @@ export default function Home() {
     <div className="container max-w-4xl mx-auto px-4 py-16">
       {/* Hero Section */}
       <section className="mb-16">
-        <div className="flex items-center gap-8 mb-8">
-          <div className="w-40 h-40 rounded-full overflow-hidden shrink-0">
+        <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-8 mb-8">
+          <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shrink-0">
             <Image
               src="/profile.jpg"
               alt="Tom Walczak"
@@ -66,29 +66,29 @@ export default function Home() {
               priority
             />
           </div>
-          <div>
-            <h1 className="text-3xl font-bold tracking-tight mb-2">
+          <div className="text-center sm:text-left">
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
               Hi, I&apos;m Tom
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg sm:text-xl text-muted-foreground">
               Building verifiable, truth-seeking AI agents
             </p>
           </div>
         </div>
 
-        <blockquote className="border-l-2 border-primary pl-4 text-muted-foreground mb-4">
+        <blockquote className="border-l-2 border-primary pl-4 text-muted-foreground mb-4 text-sm sm:text-base">
           I&apos;m building AI agents that verify their reasoning on complex,
           controversial questions — surfacing counter-arguments, stress-testing
           logic, and turning confusion into clarity. This will 100x intellectual
           work and make real-time fact-checking possible.
         </blockquote>
 
-        <p className="text-sm text-muted-foreground mb-4">
+        <p className="text-sm text-muted-foreground mb-4 text-center sm:text-left">
           I&apos;m based in London, UK.
         </p>
 
-        <p className="text-sm text-muted-foreground mb-4">
-          Follow along on{" "}
+        <p className="text-sm text-muted-foreground mb-4 hidden sm:block">
+          Follow me on{" "}
           <a
             href="https://tomwalczak.substack.com"
             target="_blank"
@@ -118,7 +118,7 @@ export default function Home() {
           .
         </p>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-center sm:justify-start gap-3">
           {socialLinks.map((link) => {
             const Icon = link.icon;
             return (

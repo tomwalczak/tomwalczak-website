@@ -37,13 +37,13 @@ export function Header() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-4xl items-center mx-auto px-4">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+        <Link href="/" className="mr-4 md:mr-6 flex items-center space-x-2 shrink-0">
           <span className="font-bold text-lg">Tom Walczak</span>
         </Link>
         
-        <nav className="flex items-center space-x-6 text-sm font-medium">
+        <nav className="flex items-center space-x-4 md:space-x-6 text-sm font-medium">
           {navigation.map((item) => (
             <Link
               key={item.href}
@@ -60,7 +60,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex flex-1 items-center justify-end space-x-2">
+        <div className="flex flex-1 items-center justify-end space-x-1 md:space-x-2">
           {socialLinks.map((link) => {
             const Icon = link.icon;
             return (
@@ -68,7 +68,7 @@ export function Header() {
                 key={link.name}
                 variant="ghost"
                 size="icon"
-                className="h-8 w-8"
+                className="h-8 w-8 hidden sm:inline-flex"
                 asChild
               >
                 <a
