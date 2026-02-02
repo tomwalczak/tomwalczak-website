@@ -165,11 +165,11 @@ export default function Home() {
             </ul>
             <Button variant="outline" size="sm" asChild>
               <a
-                href="https://open-debate.ai"
+                href="https://github.com/tomwalczak/open-debate"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Coming soon <ExternalLink className="ml-2 h-3 w-3" />
+                View on GitHub <ExternalLink className="ml-2 h-3 w-3" />
               </a>
             </Button>
           </div>
