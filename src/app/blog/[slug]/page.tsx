@@ -117,12 +117,12 @@ export default async function BlogPost({ params }: Props) {
 
         <header className="mb-12">
           <time className="text-sm text-muted-foreground">{formatDate(post.date)}</time>
-          <h1 className="text-4xl font-bold mt-2 mb-4">{post.title}</h1>
-          <p className="text-xl text-muted-foreground">{post.description}</p>
+          <h1 className="text-2xl md:text-4xl font-bold mt-2 mb-4">{post.title}</h1>
+          <p className="text-lg md:text-xl text-muted-foreground">{post.description}</p>
         </header>
 
         <div
-          className="prose prose-neutral dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-pre:bg-muted prose-pre:border prose-pre:border-border"
+          className="prose prose-sm md:prose-base prose-neutral dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-pre:bg-muted prose-pre:border prose-pre:border-border"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
 
