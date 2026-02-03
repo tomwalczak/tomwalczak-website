@@ -11,12 +11,12 @@ const jsonLd = {
   name: "Tom Walczak",
   url: "https://tomwalczak.com",
   image: "https://tomwalczak.com/profile.jpg",
-  jobTitle: "AI Engineer",
+  jobTitle: "Head of AI",
   worksFor: {
     "@type": "Organization",
     name: "Alex Epstein",
   },
-  description: "Building verifiable, truth-seeking AI agents",
+  description: "AI Engineer | Head of AI at Alex Epstein. Building truth-seeking AI that stress-tests arguments and surfaces counter-arguments. Based in London.",
   sameAs: [
     "https://github.com/tomwalczak",
     "https://x.com/tom_walchak",
@@ -231,16 +231,14 @@ export default function Home() {
           <div className="border border-border rounded-lg p-6">
             <h3 className="text-xl font-semibold mb-2">AlexAI</h3>
             <p className="text-muted-foreground mb-4">
-              Conversational AI embodying energy expert Alex Epstein&apos;s
-              thinking. A production AI system that captures and communicates
-              ideas from Fossil Future and The Moral Case for Fossil Fuels.
+              Public conversational AI that explains energy and climate issues
+              through Alex Epstein&apos;s lens. Built on his books, articles,
+              and decades of published work.
             </p>
             <ul className="text-sm text-muted-foreground space-y-1 mb-4">
-              <li>• 900+ indexed sound bites, timeless principles</li>
-              <li>
-                • AlexAI Pro — Research-oriented tool with stricter guardrails
-              </li>
-              <li>• Commentary Engine — AI-powered news analysis</li>
+              <li>• Ask questions about energy policy, climate, and human flourishing</li>
+              <li>• Answers grounded in Alex&apos;s analytical framework</li>
+              <li>• Free to use</li>
             </ul>
             <Button variant="outline" size="sm" asChild>
               <a
@@ -249,6 +247,29 @@ export default function Home() {
                 rel="noopener noreferrer"
               >
                 Try AlexAI <ExternalLink className="ml-2 h-3 w-3" />
+              </a>
+            </Button>
+          </div>
+
+          <div className="border border-border rounded-lg p-6">
+            <h3 className="text-xl font-semibold mb-2">AlexAI Pro</h3>
+            <p className="text-muted-foreground mb-4">
+              Research and writing platform for energy policy advocates. Runs
+              multi-step workflows that search Alex&apos;s knowledge base, crawl
+              web sources, and produce structured documents.
+            </p>
+            <ul className="text-sm text-muted-foreground space-y-1 mb-4">
+              <li>• 9 document tools: talking points, policy briefs, op-eds, influence plans</li>
+              <li>• Real-time search streaming — watch the AI research</li>
+              <li>• Cited sources from knowledge base, government data, and web</li>
+            </ul>
+            <Button variant="outline" size="sm" asChild>
+              <a
+                href="https://pro.alexepstein.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn more <ExternalLink className="ml-2 h-3 w-3" />
               </a>
             </Button>
           </div>
