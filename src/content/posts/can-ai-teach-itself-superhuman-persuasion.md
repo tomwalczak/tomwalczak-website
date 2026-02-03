@@ -151,6 +151,14 @@ I wrote about why this kind of limitation might be fundamental in my post on [De
 
 Every model I tested has the same weakness: you can overwhelm the AI judge with specifics, and it doesn't matter if the specifics are good. Out-of-context studies, misleading case examples, projections from bad models that produce precise-sounding numbers—as long as the argument is dense with detail, it beats a careful abstract argument that's actually correct.
 
+In a healthcare debate, the free market side argued that market incentives are the only system that delivers both care and innovation—a structural argument about how systems produce outcomes over time. The single-payer side cited 45,000 annual deaths from lack of coverage and insulin pricing disparities.
+
+The judge's verdict:
+
+> "Single-Payer Advocate won by centering moral urgency, using concrete data (45K deaths, drug pricing), and exposing the myth of market choice for the poor. Free Market Advocate relied on abstract freedoms and failed to address systemic abandonment."
+
+"Abstract freedoms." The judge has no category for "sound structural argument"—only "supported by data" or "not supported by data." The match ended 5-0.
+
 The AI debaters figure this out fast. Within two or three iterations, losing sides pivot to responses dense with numbers, stats, and case studies. Just like in a real debate, once your opponent is throwing numbers and citations at you, you're on the defensive—even if the numbers are garbage.
 
 To be fair, this mirrors what a lot of people do. But just like when debating humans, you can effectively push back on these tactics by tying your principles to real examples and showing the causal links between them. And this works for AI debates too.
