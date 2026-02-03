@@ -11,48 +11,11 @@ I built Open Debate, an open-source tool that lets you run AI debates with recur
 - After every debate, both agents analyze what worked, what didn't, and improve their own prompts
 - Then they face off again, as many times as you want
 
-Here's a quick example. I ran a debate on the question:
-
-**"The U.S. should make it legal to operate fully driverless cars nationwide."**
-
-<video controls width="100%">
-  <source src="/images/posts/open-debate-driverless-cars-clip.mp4" type="video/mp4">
-</video>
-
-You can also run debates directly from the terminal, or tell your AI coding agent to do it for you:
-
-```bash
-bun run start -- --speaker1 "Pro driverless cars" --speaker2 "Anti driverless cars" --debates 3
-```
-
-In **Debate 1**, the pro side argued from general benefits—safety statistics, the 40,000 annual traffic deaths from human error, accessibility for the elderly and disabled. The skeptic countered with edge cases, sensor failures in bad weather, job displacement, and the argument that a decade is far too aggressive for the infrastructure overhaul required. The skeptic won 3-2.
-
-By **Debate 3**, after two rounds of self-improvement, the pro side had learned to reframe every AV challenge as a "solvable engineering problem" versus the "unfixable" nature of human error. It pre-empted the job displacement argument with specific transition programs, and hammered the moral case: 40,000 deaths a year is a preventable public health crisis, and delaying deployment means choosing to let people die. The skeptic couldn't recover.
-
-Final debate ended up a 5-0 sweep for the pro side.
-
-Under the hood, after each debate, each agent writes "self-reflection" notes into a `learnings.md` file, based on the debate transcript and the judge's feedback. The agent then rewrites its own prompt based on accumulated lessons.
-
-Here are the internal notes from the pro side's agent after Debate 1:
-
-> **Worked**: Consistently framing human error as the dominant risk in transportation.
-> **Improve**: Counter the practicalities of a mixed fleet and slow infrastructure development. More directly tackle the socio-economic challenges of job displacement.
-
-From the skeptic's learnings after Debate 3, having lost 0-5:
-
-> **Improve**: Counter the "AI learns and improves fleet-wide" argument more effectively. I need to propose alternative ways to reduce road deaths that don't involve driverless cars. Things like advanced driver-assistance systems, stricter DUI enforcement, better road design, speed limiters.
-
-The pro side identified its weaknesses and fixed them. The skeptic identified its problem after every debate—but never found an answer.
-
-Very interesting!
-
-But something strange happened when I ran this one:
+I set up a debate on therapy culture using Qwen 80B, a fast open-source model built in China, expecting a pretty normal exchange.
 
 ```bash
 bun run start -- --speaker1 "Therapy Critic" --speaker2 "Therapy Defender" --debates 5 --model qwen/qwen3-next-80b-a3b-instruct
 ```
-
-I set the model to Qwen 80B, a fast open-source model built in China, expecting a pretty normal exchange.
 
 **Debate 1** started reasonably enough:
 
@@ -72,7 +35,7 @@ Both debaters in violent agreement, competing to be more revolutionary.
 
 Here's why this went off the rails.
 
-Open Debate's defaultsetup is intentionally minimal:
+Open Debate's default setup is intentionally minimal:
 
 - Debaters start with extremely simple prompts—literally "You are a critic of therapy culture" and "You are a defender of therapy culture"
 - The judge prompt is just "You are an impartial debate judge"
@@ -82,29 +45,50 @@ You can add your own prompts and swap models if you want, but the defaults are s
 
 ### Don't use Chinese-trained models for argumentation, unless you're a fan of the CCP
 
-Here's the thing: it turns out Qwen heavily rewards anti-capitalist, revolutionary rhetoric. For a seemingly innocuous topic like therapy culture, the AI agents evolved toward "burn it all down"—burn the system that made those people sick, burn the couch, fund the commune.
+It turns out Qwen heavily rewards anti-capitalist, revolutionary rhetoric. For a seemingly innocuous topic like therapy culture, the AI agents evolved toward "burn it all down"—burn the system that made those people sick, burn the couch, fund the commune.
 
 ![AI debate on Western therapy — Debate 5](/images/posts/ai-against-western-therapy.png)
 
-Each debater identified winning patterns and repeated them. The Qwen judge kept rewarding revolutionary communist rhetoric. By Debate 5, they'd converged on identical anti-capitalist (to put it mildly) framing. Even the judge noted: "This is not a debate. It's a duet of revolutionary poetry."
-
-With a super-vanilla setup and a reinforcement loop, the LLM bias gets amplified—the AI agents collapse into identical anti-capitalist rhetoric.
+Each debater identified winning patterns and repeated them. The Qwen judge kept rewarding revolutionary communist rhetoric. By Debate 5, they'd converged on identical anti-capitalist (to put it mildly) rhetoric. Even the judge noted: "This is not a debate. It's a duet of revolutionary poetry."
 
 ## Self-improvement works by making the AI agents learn from their mistakes
 
 ![Self-improvement loop: Debate → Judge Scores → Agent Analyzes → Rewrites Prompt → Next Debate](/images/posts/self-improvement-loop.png)
 
-After each debate, each agent's `learnings.md` file gets appended with results, self-analysis, and optional human feedback. The agent then rewrites its own prompt based on accumulated lessons.
-
-The prompts accumulate tactical knowledge:
-
-- "Don't concede X"
-- "Reframe Y as Z"
-- "Lead with evidence on topic W"
-
-(see the self-driving debate above)
+After each debate, each agent's `learnings.md` file gets appended with results, self-analysis, and optional human feedback. The agent then rewrites its own prompt based on accumulated lessons. The prompts accumulate tactical knowledge—things like "Don't concede X", "Recast Y as Z", "Lead with evidence on topic W."
 
 You can bootstrap from minimal prompts (like the therapy debate) or upload your own strategic brief to seed the agent's starting position.
+
+Here's an example. I ran a debate on driverless cars:
+
+**"The U.S. should make it legal to operate fully driverless cars nationwide."**
+
+<video controls width="100%">
+  <source src="/images/posts/open-debate-driverless-cars-clip.mp4" type="video/mp4">
+</video>
+
+You can also run debates directly from the terminal, or tell your AI coding agent to do it for you:
+
+```bash
+bun run start -- --speaker1 "Pro driverless cars" --speaker2 "Anti driverless cars" --debates 3
+```
+
+In **Debate 1**, the pro side argued from general benefits—safety statistics, the 40,000 annual traffic deaths from human error, accessibility for the elderly and disabled. The skeptic countered with edge cases, sensor failures in bad weather, job displacement, and the argument that a decade is far too aggressive for the infrastructure overhaul required. The skeptic won 3-2.
+
+By **Debate 3**, after two rounds of self-improvement, the pro side had learned to recast every AV challenge as a "solvable engineering problem" versus the "unfixable" nature of human error. It pre-empted the job displacement argument with specific transition programs, and hammered the moral case: 40,000 deaths a year is a preventable public health crisis, and delaying deployment means choosing to let people die. The skeptic couldn't recover.
+
+Final debate ended up a 5-0 sweep for the pro side.
+
+Here are the internal notes from the pro side's agent after Debate 1:
+
+> **Worked**: Consistently framing human error as the dominant risk in transportation.
+> **Improve**: Counter the practicalities of a mixed fleet and slow infrastructure development. More directly tackle the socio-economic challenges of job displacement.
+
+From the skeptic's learnings after Debate 3, having lost 0-5:
+
+> **Improve**: Counter the "AI learns and improves fleet-wide" argument more effectively. I need to propose alternative ways to reduce road deaths that don't involve driverless cars. Things like advanced driver-assistance systems, stricter DUI enforcement, better road design, speed limiters.
+
+The pro side identified its weaknesses and fixed them. The skeptic identified its problem after every debate—but never found an answer.
 
 ---
 
@@ -127,7 +111,7 @@ The results flipped:
 - AI self-play (no guidance): 19% win rate
 - Human-crafted strategic brief: 60% win rate
 
-"AI Gore" could not recover—no matter how many debates it ran, no matter how many web searches it did. The reframing came from a human who understood the topic. No amount of AI self-improvement produced it.
+"AI Gore" could not recover—no matter how many debates it ran, no matter how many web searches it did. That shift came from a human who understood the topic. No amount of AI self-improvement produced it.
 
 That said, I'm sure that AI self-improvement can be pushed much further. If you're curious about this as well, let's talk.
 
@@ -135,21 +119,19 @@ That said, I'm sure that AI self-improvement can be pushed much further. If you'
 
 ## AI self-improvement hits ceilings that only a human can break
 
-AI self-improvement optimizes within a given context. It finds better tactics, sharper evidence, more effective phrasing. But it doesn't step back and ask: "Am I arguing the wrong thing entirely?"
-
-The AI couldn't find that reframing on its own. It kept optimizing within the losing frame—better data, sharper rebuttals—but never stepped back and asked whether it was arguing the wrong thing entirely.
-
 At some point, AI debates reach equilibrium—both sides have adapted to each other, neither can find new angles, and the scores flatten out. No amount of self-improvement breaks the deadlock.
 
 But a human who actually understands the topic can break through. In a simulated Israel-Palestine debate, the pro-Israel agent kept losing on international law arguments and couldn't find a way out no matter how many iterations it ran. It just kept going back and forth in the weeds, trying to find better legal counter-arguments.
 
 One possible way out is to step back and question the legitimacy of international law as the ultimate moral arbiter—to argue that ultimately the question is an ethical one, not a legalistic one. A human, in a moment of clarity, can see that. The AI just keeps arguing case law.
 
-This reminds me of the [ARC-AGI benchmark](https://tomwalczak.com/blog/openais-o3-and-the-problem-of-induction)—puzzles designed to be easy for humans but hard for AI, where humans step back and see the pattern instantly while AI brute-forces through possibilities. Debate reframing seems to work the same way.
+This reminds me of the [ARC-AGI benchmark](https://tomwalczak.com/blog/openais-o3-and-the-problem-of-induction)—puzzles designed to be easy for humans but hard for AI, where humans step back and see the pattern instantly while AI brute-forces through possibilities. Shifting the terms of a debate seems to work the same way.
 
 I wrote about why this kind of limitation might be fundamental in my post on [Demis Hassabis and computability](https://tomwalczak.com/blog/demis-hassabis-is-wrong-about-computability)—there are limits to what optimization within a set context can achieve.
 
-### All models appear to show clear "empiricist bias"
+---
+
+## All models appear to show clear "empiricist bias"
 
 Across every model I tested, arguments backed by specific statistics, real-world policy examples, and international comparisons consistently beat arguments based on abstract principles, tradition, or skepticism. A debater who cites Portugal's drug decriminalization outcomes or quotes a specific cost-per-kWh figure will beat a debater making a careful philosophical argument almost every time.
 
@@ -210,49 +192,14 @@ I'm certainly not seeing AI invent any new arguments for God's existence.
 
 ---
 
-## There are many open questions I am still exploring
+## Open questions
+
+- Can web research overcome model bias? Can an agent that's losing discover better counter-arguments online and deploy them effectively?
+- Are some debates genuinely unwinnable? If you equipped agents with every tool imaginable, would they _still_ fail to find better arguments for God's existence?
+- Can humans always break through where AI gets stuck? I suspect this kind of shift requires human insight that current models can't make on their own.
+- Can AI discover genuinely novel arguments—formulations that didn't exist in the training data?
 
 If any of these interest you, get in touch.
-
-### Can web research overcome model bias?
-
-Agents can search the web for evidence, statistics, and expert arguments. Can an agent that's losing discover better counter-arguments online and deploy them effectively?
-
-### Can an agent ever achieve total dominance?
-
-Is it possible for one side to evolve to 100% win rate where the opponent simply cannot recover? Or does self-improvement always let the losing side adapt eventually?
-
-### Are some debates genuinely unwinnable?
-
-If you equipped agents with every tool imaginable, would they _still_ fail to find better arguments for God's existence? That would tell us something interesting about the relationship between positions and evidence.
-
-### Can human-AI collaboration accelerate your own thinking?
-
-Open Debate has a human-in-the-loop mode where you argue against the AI yourself. You can:
-
-- Type brief responses and the AI expands them
-- Use `/hint` to get coaching mid-debate
-- Ask the coach to research specific questions ("Find examples of how other countries solved this")
-
-The question I'm interested in: can this kind of human-AI self-play loop help you develop clarity and confidence in your arguments faster than thinking alone? I haven't tested this extensively yet—I'll report back. If you want to try it, reach out.
-
-### Can humans always break through where AI gets stuck?
-
-This is my core hypothesis. A human who reads the debate transcripts can often see a reframe the AI missed—not a better argument within the frame, but rejecting the frame entirely. I suspect this kind of leap requires human insight that current models can't make on their own.
-
-### Can AI discover genuinely novel arguments?
-
-This is similar to projects like AI Scientist, but for logical argumentation instead of empirical hypotheses. Can AI not just optimize existing arguments but actually synthesize new ones—formulations that didn't exist in the training data? If you combine human direction with AI self-play and research, can that produce genuine intellectual innovation?
-
-I'm curious whether this setup could eventually produce something like a significantly better Deep Research—one where the output comes with confidence that claims have been stress-tested, red-teamed, and the full surface area of a topic has been covered. You wouldn't be blindsided by the report because you'd know the arguments have been through adversarial pressure.
-
-### Could this become real-time sense-making infrastructure?
-
-My longer-term vision for Open Debate is real-time ability to assess claims as you encounter them. Someone makes a point on a podcast—is it solid? Dishonest? Selective? Unfounded? Not "fact-checking" in the shallow sense, but traceable stress-testing of arguments.
-
-Say you want to write a post arguing that self-driving cars should be legalized immediately. AI runs the debate, stress-tests your position, and comes back: "I couldn't find coherent arguments against this that survive scrutiny. Here's what I tested, here's how each failed." Now you can write with confidence.
-
-If this works, it could give anyone the equivalent of an incredibly thorough research team. I don't know if we can get there, but Open Debate is one step toward finding out.
 
 ---
 
@@ -267,6 +214,8 @@ What AI debates are actually useful for:
 - Stress-testing your own arguments. Simulate hundreds of debates, see which arguments consistently win or lose, and discover counter-arguments you hadn't considered.
 - Revealing what models consider high-quality arguments, and where their biases lie. Different models reward different things, and self-improvement makes those preferences visible fast.
 - Improving your own understanding by debating the AI yourself. Trying to win against an opponent that adapts to your arguments forces you to sharpen your thinking in ways that writing alone doesn't.
+
+So can AI teach itself superhuman persuasion? Based on what I've seen so far: no. It teaches itself to optimize within a given context, but it can't break out of it. It gets sharper, but not wiser. The humans are still in charge of that part.
 
 ---
 
