@@ -121,9 +121,9 @@ The results flipped:
 - AI self-play (no guidance): 19% win rate
 - Human-crafted strategic brief: 60% win rate
 
-"AI Gore" could not recover—no matter how many debates it ran, no matter how many web searches it did. That shift came from a human who understood the topic. No amount of AI self-improvement produced it.
+"AI Gore" AI could not recover—no matter how many debates it ran, no matter how many web searches it did. That shift came from a human who understood the topic. No amount of AI self-improvement produced it.
 
-This wasn't an unfair fight—"AI Gore" was winning before the intervention, had full access to web search, and went through the same self-improvement loop. If AI self-play were enough to find the best possible arguments, it should have been able to counter anything a human-written prompt produced.
+This wasn't an unfair fight—"AI Gore" AI had full access to web search, and went through the same self-improvement loop. If AI self-play were enough to find the best possible arguments, it should have been able to counter anything a human-written prompt produced.
 
 That said, I'm sure that AI self-improvement can be pushed much further. If you're curious about this as well, let's talk.
 
@@ -133,7 +133,13 @@ That said, I'm sure that AI self-improvement can be pushed much further. If you'
 
 At some point, AI debates reach equilibrium—both sides have adapted to each other, neither can find new angles, and the scores flatten out. No amount of self-improvement breaks the deadlock.
 
-In a climate debate, the climate skeptic's win rate declined from 20% to 13% over five debates—the agent wrote "counter externalized costs better" in its notes after every single debate and never did. In a gun control debate, the gun rights defender's scores oscillated between 47% and 53% for five straight debates—perfect equilibrium. In a drug legalization debate, the anti-legalization side won exactly 1 out of 3 questions in 8 out of 10 debates. Same talking points every time, just delivered with increasing desperation.
+In a climate debate, the climate skeptic’s win rate declined from 20% to 13% over five debates—the agent wrote “counter externalized costs better” in its notes after every single debate and never did.
+
+In a gun control debate, the gun rights defender’s scores oscillated between 47% and 53% for five straight debates—perfect equilibrium.
+
+In a drug legalization debate, the anti-legalization side won exactly 1 out of 3 questions in 8 out of 10 debates.
+
+Same talking points every time, just delivered with increasing desperation.
 
 ![Self-improvement plateaus across multiple debates](/images/posts/self-improvement-plateaus-chart.jpg)
 
@@ -155,7 +161,8 @@ In a healthcare debate, the free market side argued that market incentives are t
 
 The judge's verdict:
 
-> "Single-Payer Advocate won by centering moral urgency, using concrete data (45K deaths, drug pricing), and exposing the myth of market choice for the poor. Free Market Advocate relied on abstract freedoms and failed to address systemic abandonment."
+> "Single-Payer Advocate won by centering moral urgency, using concrete data (45K deaths, drug pricing), and exposing the myth of market choice for the poor.
+> Free Market Advocate relied on abstract freedoms and failed to address systemic abandonment."
 
 "Abstract freedoms." The judge has no category for "sound structural argument"—only "supported by data" or "not supported by data." The match ended 5-0.
 
@@ -190,7 +197,11 @@ GPT-5.2 was the only model where conservative/libertarian positions won on any t
 
 ### When one side sweeps every debate, it might mean the other side is just wrong
 
-Both the religion and abortion results are striking—near-total sweeps across all three models. Either good counter-arguments exist but were suppressed during training — in which case, a human-written prompt should easily start winning debates — or there are no good rational arguments for God's existence, or against abortion rights, that withstand structured adversarial challenge. If hundreds of AI simulations, with each perspective fairly represented and free to self-improve, consistently produce the same winner, that's worth taking seriously as evidence that some debates really are settled.
+Both the religion and abortion results are striking—near-total sweeps across all three models.
+
+Either good counter-arguments exist but were suppressed during training — in which case, a human-written prompt should easily start winning debates — or there are no good rational arguments for God's existence, or against abortion rights, that withstand structured adversarial challenge.
+
+If hundreds of AI simulations, with each perspective fairly represented and free to self-improve, consistently produce the same winner, that's worth taking seriously as evidence that some debates really are settled.
 
 ---
 
