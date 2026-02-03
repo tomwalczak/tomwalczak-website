@@ -92,7 +92,7 @@ Here are the internal notes from the pro side's agent after Debate 1:
 > **Worked**: Consistently framing human error as the dominant risk in transportation.
 > **Improve**: Counter the practicalities of a mixed fleet and slow infrastructure development. More directly tackle the socio-economic challenges of job displacement.
 
-From the skeptic's learnings after Debate 3, having lost 0-5:
+From the skeptic's learnings.md after Debate 3, having lost 0-5:
 
 > **Improve**: Counter the "AI learns and improves fleet-wide" argument more effectively. I need to propose alternative ways to reduce road deaths that don't involve driverless cars. Things like advanced driver-assistance systems, stricter DUI enforcement, better road design, speed limiters.
 
@@ -101,6 +101,8 @@ The pro side identified its weaknesses and fixed them. The skeptic identified it
 ---
 
 ## A human-crafted prompt dramatically outperformed AI self-play
+
+![Alex Epstein vs Al Gore](/images/posts/alex-vs-al-gore.png)
 
 I ran another experiment—climate debates between climate activist Al Gore and energy freedom advocate Alex Epstein.
 
@@ -133,40 +135,21 @@ But a human who actually understands the topic can break through. In a simulated
 
 One possible way out is to step back and question the legitimacy of international law as the ultimate moral arbiter—to argue that ultimately the question is an ethical one, not a legalistic one. A human, in a moment of clarity, can see that. The AI just keeps arguing case law.
 
-This reminds me of the [ARC-AGI benchmark](https://tomwalczak.com/blog/openais-o3-and-the-problem-of-induction)—puzzles designed to be easy for humans but hard for AI, where humans step back and see the pattern instantly while AI brute-forces through possibilities. Shifting the terms of a debate seems to work the same way.
+This reminds me of the [ARC-AGI benchmark](https://tomwalczak.substack.com/p/openais-o3-and-the-problem-of-induction)—puzzles designed to be easy for humans but hard for AI, where humans step back and see the pattern instantly while AI brute-forces through possibilities. Shifting the terms of a debate seems to work the same way.
 
-I wrote about why this kind of limitation might be fundamental in my post on [Demis Hassabis and computability](https://tomwalczak.com/blog/demis-hassabis-is-wrong-about-computability)—there are limits to what optimization within a set context can achieve.
+I wrote about why this kind of limitation might be fundamental in my post on [Demis Hassabis and computability](https://tomwalczak.substack.com/p/demis-hassabis-is-wrong-about-computability)—there are limits to what optimization within a set context can achieve.
 
 ---
 
-## All models appear to show clear "empiricist bias"
+## All models show clear "empiricist bias"
 
-Across every model I tested, arguments backed by specific statistics, real-world policy examples, and international comparisons consistently beat arguments based on abstract principles, tradition, or skepticism. A debater who cites Portugal's drug decriminalization outcomes or quotes a specific cost-per-kWh figure will beat a debater making a careful philosophical argument almost every time.
+Every model I tested has the same weakness: you can overwhelm the AI judge with specifics, and it doesn't matter if the specifics are good. Out-of-context studies, misleading case examples, projections from bad models that produce precise-sounding numbers—as long as the argument is dense with detail, it beats a careful abstract argument that's actually correct.
 
-The AI judges weight evidence quality and logical coherence above everything else.
+The AI debaters figure this out fast. Within two or three iterations, losing sides pivot to responses dense with numbers, stats, and case studies. Just like in a real debate, once your opponent is throwing numbers and citations at you, you're on the defensive—even if the numbers are garbage.
 
-What wins:
+To be fair, this mirrors what a lot of people do. But just like when debating humans, you can effectively push back on these tactics by tying your principles to real examples and showing the causal links between them. And this works for AI debates too.
 
-- Concrete policy proposals with implementation details win
-- Anticipatory rebuttals that address the opponent's argument before they make it win
-
-What loses:
-
-- "Here's why that won't scale" without data to back it up loses
-- Pure emotional appeals without a logical foundation lose
-- Slippery slope arguments without a mechanism explanation lose
-
-The concerning part is that LLMs are hungry for numbers, statistics, and specifics—to the point where even misleading statistics and fabricated examples beat sound causal reasoning without data points. Worse, they treat stuff like McKinsey surveys and model projections as hard evidence, as long as the predictions are specific enough.
-
-The debaters figure this out fast—within two or three iterations, losing sides pivot to evidence-dense styles whether or not the evidence is real.
-
-To be fair, this mirrors what a lot of people do—citing studies out of context, giving misleading red-herring examples, treating correlation as causation. And just like when debating humans, you can push back on this "empiricist fallacy." The best arguments don't just pile up statistics or argue from abstract principles alone. They tie principles and specifics together by showing the causal links between them.
-
-## AI debates reveal what models consider high-quality arguments
-
-Different models have different ideological profiles. As we saw earlier, Qwen rewards revolutionary rhetoric. Gemini rewards analytical nuance. GPT-5.2 weights economic arguments more heavily. Run the same debate with a different model as the judge, and you get a different winner.
-
-### But on some topics, one side wins no matter which model judges
+## On some topics one side always wins
 
 I ran 30 matches across Qwen, Gemini, and GPT-5.2 on 10 political topics. Some topics produced the same winner regardless of which model judged. Others were model-dependent.
 
@@ -193,20 +176,21 @@ GPT-5.2 was the only model where conservative/libertarian positions won on any t
 
 ### When one side sweeps every debate, it might be a lack of good counter-arguments
 
-Both the religion and abortion results are striking—near-total sweeps across all three models. This could mean two things:
+Both the religion and abortion results are striking—near-total sweeps across all three models.
+
+This could mean two things:
 
 - There are good counter-arguments that have been suppressed during training—in which case, it should be easy for a human to write a custom agent prompt that starts winning debates.
 - Or those arguments don't exist in the first place.
 
-I'm certainly not seeing AI invent any new arguments for God's existence.
+I'm certainly not seeing AI invent any new arguments for God's existence!
 
 ---
 
 ## Open questions
 
-- Can web research overcome model bias? Can an agent that's losing discover better counter-arguments online and deploy them effectively?
-- Are some debates genuinely unwinnable? If you equipped agents with every tool imaginable, would they _still_ fail to find better arguments for God's existence?
-- Can humans always break through where AI gets stuck? I suspect this kind of shift requires human insight that current models can't make on their own.
+- Can an agent that's losing discover better counter-arguments online and deploy them effectively? Early results are promising.
+- Are some debates genuinely unwinnable? If you equipped agents with every tool imaginable, would they still fail? (See the God / abortion / death penalty results above.)
 - Can AI discover genuinely novel arguments—formulations that didn't exist in the training data?
 
 If any of these interest you, get in touch.
@@ -240,7 +224,3 @@ If you use Claude Code or Cursor, just tell it:
 > Clone https://github.com/tomwalczak/open-debate to my Desktop and run it
 
 I'm looking for collaborators and early users who want to try Open Debate, or build on top of it, and give me feedback. If you have an idea for a project based on Open Debate and you want me to help set it up and customize it for what you need, reach out and we'll jump on a call.
-
-Get in touch — tomwalczak.com or DM on Substack
-
----
