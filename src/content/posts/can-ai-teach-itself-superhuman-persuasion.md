@@ -188,16 +188,9 @@ GPT-5.2 was the only model where conservative/libertarian positions won on any t
 
 ![Win rates by topic and model](/images/posts/win-rates-chart.png)
 
-### When one side sweeps every debate, it might be a lack of good counter-arguments
+### When one side sweeps every debate, it might mean the other side is just wrong
 
-Both the religion and abortion results are striking—near-total sweeps across all three models.
-
-This could mean two things:
-
-- There are good counter-arguments that have been suppressed during training—in which case, it should be easy for a human to write a custom agent prompt that starts winning debates.
-- Or those arguments don't exist in the first place.
-
-I'm certainly not seeing AI invent any new arguments for God's existence!
+Both the religion and abortion results are striking—near-total sweeps across all three models. Either good counter-arguments exist but were suppressed during training — in which case, a human-written prompt should easily start winning debates — or there are no good rational arguments for God's existence, or against abortion rights, that withstand structured adversarial challenge. If hundreds of AI simulations, with each perspective fairly represented and free to self-improve, consistently produce the same winner, that's worth taking seriously as evidence that some debates really are settled.
 
 ---
 
