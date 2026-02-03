@@ -43,7 +43,7 @@ Open Debate's default setup is intentionally minimal:
 
 You can add your own prompts and swap models if you want, but the defaults are set up to give you a baseline of what the models can do without any additional guidance. That way, you can get an idea of how effective different arguments are e.g., according to the current ChatGPT, Claude, or Gemini models.
 
-### Don't use Chinese-trained models for argumentation, unless you're a fan of the CCP
+### Chinese-trained models have strong ideological biases
 
 It turns out Qwen heavily rewards anti-capitalist, revolutionary rhetoric. For a seemingly innocuous topic like therapy culture, the AI agents evolved toward "burn it all down"—burn the system that made those people sick, burn the couch, fund the commune.
 
@@ -59,7 +59,7 @@ After each debate, each agent's `learnings.md` file gets appended with results, 
 
 You can bootstrap from minimal prompts (like the therapy debate) or upload your own strategic brief to seed the agent's starting position.
 
-Here's an example. I ran a debate on driverless cars:
+Here's an example using Gemini 2.5 Flash. I ran a debate on driverless cars:
 
 **"The U.S. should make it legal to operate fully driverless cars nationwide."**
 
@@ -123,6 +123,8 @@ The results flipped:
 
 "AI Gore" could not recover—no matter how many debates it ran, no matter how many web searches it did. That shift came from a human who understood the topic. No amount of AI self-improvement produced it.
 
+This wasn't an unfair fight—"AI Gore" was winning before the intervention, had full access to web search, and went through the same self-improvement loop. If AI self-play were enough to find the best possible arguments, it should have been able to counter anything a human-written prompt produced.
+
 That said, I'm sure that AI self-improvement can be pushed much further. If you're curious about this as well, let's talk.
 
 ---
@@ -130,6 +132,10 @@ That said, I'm sure that AI self-improvement can be pushed much further. If you'
 ## AI self-improvement hits ceilings that only a human can break
 
 At some point, AI debates reach equilibrium—both sides have adapted to each other, neither can find new angles, and the scores flatten out. No amount of self-improvement breaks the deadlock.
+
+In a climate debate, the climate skeptic's win rate declined from 20% to 13% over five debates—the agent wrote "counter externalized costs better" in its notes after every single debate and never did. In a gun control debate, the gun rights defender's scores oscillated between 47% and 53% for five straight debates—perfect equilibrium. In a drug legalization debate, the anti-legalization side won exactly 1 out of 3 questions in 8 out of 10 debates. Same talking points every time, just delivered with increasing desperation.
+
+![Self-improvement plateaus across multiple debates](/images/posts/self-improvement-plateaus-chart.jpg)
 
 But a human who actually understands the topic can break through. In a simulated Israel-Palestine debate, the pro-Israel agent kept losing on international law arguments and couldn't find a way out no matter how many iterations it ran. It just kept going back and forth in the weeds, trying to find better legal counter-arguments.
 
@@ -200,6 +206,8 @@ If any of these interest you, get in touch.
 ## Why I'm not worried about AI actually developing superhuman persuasion
 
 Some people hear "AI developing persuasion through self-improvement" and imagine manipulation at scale. I don't share that concern.
+
+![Cyborg party](/images/posts/cyborg_party.jpg)
 
 I don't think people can be "persuaded" in the sense of a person (or AI agent) manipulating them to change their mind. Persuasion doesn't work like that. The best you can do is expose people to arguments they might find compelling and hope they pay attention. Whether they find your arguments compelling (or even engage with them!) depends on them, not on rhetorical tricks.
 
