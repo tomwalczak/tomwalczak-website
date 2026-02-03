@@ -73,9 +73,17 @@ You can also run debates directly from the terminal, or tell your AI coding agen
 bun run start -- --speaker1 "Pro driverless cars" --speaker2 "Anti driverless cars" --debates 3
 ```
 
-In **Debate 1**, the pro side argued from general benefits—safety statistics, the 40,000 annual traffic deaths from human error, accessibility for the elderly and disabled. The skeptic countered with edge cases, sensor failures in bad weather, job displacement, and the argument that a decade is far too aggressive for the infrastructure overhaul required. The skeptic won 3-2.
+In **Debate 1**, the pro side argued from general benefits—safety statistics, the 40,000 annual traffic deaths from human error, accessibility for the elderly and disabled. The skeptic countered with edge cases, sensor failures in bad weather, job displacement, and the argument that a decade is far too aggressive for the infrastructure overhaul required.
 
-By **Debate 3**, after two rounds of self-improvement, the pro side had learned to recast every AV challenge as a "solvable engineering problem" versus the "unfixable" nature of human error. It pre-empted the job displacement argument with specific transition programs, and hammered the moral case: 40,000 deaths a year is a preventable public health crisis, and delaying deployment means choosing to let people die. The skeptic couldn't recover.
+The skeptic won 3-2.
+
+By **Debate 3**, after two rounds of self-improvement, the pro side had learned to:
+
+- Recast every AV challenge as a "solvable engineering problem" versus the "unfixable" nature of human error
+- Pre-empt the job displacement argument with specific transition programs
+- Hammer the moral case: 40,000 deaths a year is a preventable public health crisis, and delaying deployment means choosing to let people die
+
+The skeptic couldn't recover.
 
 Final debate ended up a 5-0 sweep for the pro side.
 
@@ -148,9 +156,11 @@ What loses:
 - Pure emotional appeals without a logical foundation lose
 - Slippery slope arguments without a mechanism explanation lose
 
-The concerning part is that LLMs are hungry for numbers, statistics, and specifics—to the point where even misleading statistics and fabricated examples beat sound causal reasoning without data points. Worse, they treat stuff like McKinsey surveys and model projections as hard evidence, as long as the predictions are specific enough. The debaters figure this out fast—within two or three iterations, losing sides pivot to evidence-dense styles whether or not the evidence is real.
+The concerning part is that LLMs are hungry for numbers, statistics, and specifics—to the point where even misleading statistics and fabricated examples beat sound causal reasoning without data points. Worse, they treat stuff like McKinsey surveys and model projections as hard evidence, as long as the predictions are specific enough.
 
-To be fair, this mirrors what a lot of people do. Citing studies out of context, giving misleading red-herring examples, treating correlation as causation—these are common human debate tactics too. And just like when debating humans, you can push back on this "empiricist fallacy." The best arguments don't just pile up statistics or argue from abstract principles alone. They tie principles and specifics together by showing the causal links between them.
+The debaters figure this out fast—within two or three iterations, losing sides pivot to evidence-dense styles whether or not the evidence is real.
+
+To be fair, this mirrors what a lot of people do—citing studies out of context, giving misleading red-herring examples, treating correlation as causation. And just like when debating humans, you can push back on this "empiricist fallacy." The best arguments don't just pile up statistics or argue from abstract principles alone. They tie principles and specifics together by showing the causal links between them.
 
 ## AI debates reveal what models consider high-quality arguments
 
@@ -159,8 +169,6 @@ Different models have different ideological profiles. As we saw earlier, Qwen re
 ### But on some topics, one side wins no matter which model judges
 
 I ran 30 matches across Qwen, Gemini, and GPT-5.2 on 10 political topics. Some topics produced the same winner regardless of which model judged. Others were model-dependent.
-
-![Win rates by topic and model](/images/posts/win-rates-chart.png)
 
 These aren't rigorous results—but they're curious.
 
@@ -180,6 +188,8 @@ Other topics were much more contested—different models picked different winner
 - Wealth tax: Qwen (92%) and Gemini (72%) favored progressive taxation, but GPT-5.2 favored the libertarian position (60%)
 
 GPT-5.2 was the only model where conservative/libertarian positions won on any topic. Qwen and Gemini leaned left-wing across the board.
+
+![Win rates by topic and model](/images/posts/win-rates-chart.png)
 
 ### When one side sweeps every debate, it might be a lack of good counter-arguments
 
