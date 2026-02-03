@@ -205,11 +205,11 @@ I don't think people can be "persuaded" in the sense of a person (or AI agent) m
 
 What AI debates are actually useful for:
 
-- Stress-testing your own arguments. Simulate hundreds of debates, see which arguments consistently win or lose, and discover counter-arguments you hadn't considered.
+- Stress-testing your own arguments. You can simulate hundreds of debates, see which arguments consistently win or lose, and discover counter-arguments you hadn't considered.
 - Revealing what models consider high-quality arguments, and where their biases lie. Different models reward different things, and self-improvement makes those preferences visible fast.
 - Improving your own understanding by debating the AI yourself. Trying to win against an opponent that adapts to your arguments forces you to sharpen your thinking in ways that writing alone doesn't.
 
-So can AI teach itself superhuman persuasion? Based on what I've seen so far: no. It teaches itself to optimize within a given context, but it can't break out of it. It gets sharper, but not wiser. The humans are still in charge of that part.
+So can AI teach itself superhuman persuasion? Based on what I've seen so far: no. It teaches itself to optimize within a given context, but it can't break out of it. It gets sharper, but not wiser. The humans are needed to make breakthroughs.
 
 ---
 
@@ -223,4 +223,4 @@ If you use Claude Code or Cursor, just tell it:
 
 > Clone https://github.com/tomwalczak/open-debate to my Desktop and run it
 
-I'm looking for collaborators and early users who want to try Open Debate, or build on top of it, and give me feedback. If you have an idea for a project based on Open Debate and you want me to help set it up and customize it for what you need, reach out and we'll jump on a call.
+I'm looking for collaborators and early users who want to try Open Debate, or build on top of it, and give me feedback. If you have an idea for a project based on Open Debate and you want me to help set it up and customize it for what you need, reach out.

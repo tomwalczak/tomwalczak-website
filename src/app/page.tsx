@@ -52,6 +52,13 @@ const socialLinks = [
 
 const featuredPosts = [
   {
+    title: "Can AI Teach Itself Superhuman Persuasion? Introducing Open Debate",
+    description:
+      'I asked AI agents to debate "therapy culture." Five rounds later, both sides were calling for a violent communist revolution.',
+    date: "Feb 3, 2026",
+    slug: "can-ai-teach-itself-superhuman-persuasion",
+  },
+  {
     title: "Demis Hassabis Is Wrong About Computability",
     description:
       'The word "computable" is doing a ridiculous amount of hidden work in AI debates',
@@ -90,7 +97,7 @@ export default function Home() {
               alt="Tom Walczak"
               width={160}
               height={160}
-              className="w-full h-full object-cover scale-110"
+              className="w-full h-full object-cover"
               priority
             />
           </div>
