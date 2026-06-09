@@ -11,6 +11,8 @@ I built Open Debate, an open-source tool that lets you run AI debates with recur
 - After every debate, both agents analyze what worked, what didn't, and improve their own prompts
 - Then they face off again, as many times as you want
 
+![Open Debate](/images/posts/open-debate-logo-tagline-horizontal.png)
+
 I set up a debate on therapy culture using Qwen 80B, a fast open-source model built in China, expecting a pretty normal exchange.
 
 ```bash

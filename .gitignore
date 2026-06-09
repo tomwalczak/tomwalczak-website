@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# iCloud sync exclusions
+*.nosync
+.next
+
+# playwright-cli artifacts
+.playwright-cli/

@@ -6,8 +6,7 @@ date: "2026-01-09"
 
 The most interesting debate in AI right now is this: "Are there any problems AI won't be able to solve?"
 
-![Conceptual illustration](/images/posts/placeholder.svg)
-*[View original image on Substack →](https://tomwalczak.substack.com/p/demis-hassabis-is-wrong-about-computability)*
+![Conceptual illustration](/images/posts/demis-computability-hero.jpg)
 
 After all, AI is already a superhuman software engineer and medical diagnostician, and soon every car will be self-driving.
 

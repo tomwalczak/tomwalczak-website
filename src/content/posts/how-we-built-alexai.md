@@ -10,8 +10,7 @@ While we're not yet at the point when we can build an end-to-end knowledge syste
 
 ## Making Sense of Climate Change and Energy With AlexAI
 
-![AlexAI Interface](/images/posts/placeholder.svg)
-*[View AlexAI screenshots and architecture diagrams on Substack →](https://tomwalczak.substack.com/p/how-we-built-alexai-the-worlds-top)*
+![AlexAI Interface](/images/posts/alexai-interface.png)
 
 The debate around climate change and energy is one of those complex and contentious issues.
 

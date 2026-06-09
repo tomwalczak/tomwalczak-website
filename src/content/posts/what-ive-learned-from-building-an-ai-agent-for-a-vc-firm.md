@@ -30,8 +30,9 @@ AI can't replace the human factor of building relationships, but it can handle a
 
 I worked with a top early-stage VC firm that was spending too much time sifting through pitch decks.
 
-![Blumberg AI Demo](/images/posts/placeholder.svg)
-*[View demo video on Substack →](https://tomwalczak.substack.com/p/what-ive-learned-from-a-year-of-building)* The decks arrive daily (sometimes dozens at once, after a demo day), they are often buried in forwarded emails or hidden behind DocSend links. The goal was simple: create an AI-driven system that screens incoming opportunities faster and more objectively than a human associate.
+![Blumberg AI system architecture](/images/posts/blumberg-ai-demo.png)
+
+The decks arrive daily (sometimes dozens at once, after a demo day), they are often buried in forwarded emails or hidden behind DocSend links. The goal was simple: create an AI-driven system that screens incoming opportunities faster and more objectively than a human associate.
 
 To build this, we had to do a lot of software engineering—from translating the investment criteria into AI prompts, handling DocSend links and multi-file email chains, integrating GPT-4/Gemini, scoring deals, and finally syncing up with the CRM.
 

@@ -1,61 +1,16 @@
-# Post Images To Add
+# Post images
 
-Replace `placeholder.svg` references in blog posts with actual images from Substack.
+Images referenced by blog posts in `src/content/posts/`. Posts reference them as
+`![alt](/images/posts/<file>)`.
 
-## Images Needed
+All placeholder (`placeholder.svg`) references have been replaced with the real
+images uploaded to Substack (June 2026). To add images for a new post:
 
-### 1. demis-hassabis-is-wrong-about-computability.md
-- **Image**: Conceptual AI/creativity illustration
-- **Source**: https://tomwalczak.substack.com/p/demis-hassabis-is-wrong-about-computability
-- **Save as**: `demis-computability-hero.jpg`
+1. Open the published Substack post.
+2. Download each image from its `substack-post-media.s3.amazonaws.com/public/images/...`
+   URL (keeps the original format/resolution; the `substackcdn.com/image/fetch/...`
+   wrapper may convert to webp).
+3. Save here with a descriptive, post-prefixed name (e.g. `fake-agreement-waymo-safety.png`).
+4. Reference it from the post markdown.
 
-### 2. ai-is-like-waking-up-with-100-million.md
-- **Image**: $100 million illustration
-- **Source**: https://tomwalczak.substack.com/p/ai-is-like-waking-up-with-100-million
-- **Save as**: `100-million-hero.jpg`
-
-### 3. making-policy-costs-personal-with-ai.md
-- **Images**: 
-  1. Dashboard screenshot → `policy-impact-dashboard.png`
-  2. News feed GIF → `policy-impact-news-feed.gif`
-  3. Email draft GIF → `policy-impact-email-draft.gif`
-- **Source**: https://tomwalczak.substack.com/p/making-policy-costs-personal-with
-
-### 4. openais-o3-and-the-problem-of-induction.md
-- **Images**:
-  1. ARC puzzle example → `arc-puzzle-example.png`
-  2. Swan induction diagram → `swan-induction.png`
-- **Source**: https://tomwalczak.substack.com/p/openais-o3-and-the-problem-of-induction
-
-### 5. how-we-built-alexai.md
-- **Images** (many screenshots):
-  1. AlexAI interface screenshot → `alexai-interface.png`
-  2. Architecture diagram → `alexai-architecture.png`
-  3. RAG diagram → `alexai-rag-diagram.png`
-  4. Prompt examples → `alexai-prompts.png`
-  5. Follow-up questions UI → `alexai-followups.png`
-- **Source**: https://tomwalczak.substack.com/p/how-we-built-alexai-the-worlds-top
-
-### 6. what-ive-learned-from-building-an-ai-agent-for-a-vc-firm.md
-- **Image**: Demo video thumbnail or screenshot
-- **Source**: https://tomwalczak.substack.com/p/what-ive-learned-from-a-year-of-building
-- **Save as**: `blumberg-ai-demo.png`
-
-## How to Download from Substack
-
-1. Open the Substack post
-2. Right-click on images and "Save Image As"
-3. Save to this folder with the suggested filename
-4. Update the corresponding .md file to reference the new image
-
-## After Adding Images
-
-Update the markdown files to replace:
-```markdown
-![Description](/images/posts/placeholder.svg)
-```
-
-With:
-```markdown
-![Description](/images/posts/your-new-image.png)
-```
+`placeholder.svg` is kept as a fallback for drafts that don't yet have real images.

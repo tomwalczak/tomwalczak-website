@@ -16,8 +16,7 @@ I'm building an AI-powered dashboard that bridges this gap between policy suppor
 
 **Check out the work-in-progress:** [policy-impact.uk](https://policy-impact.uk/)
 
-![Policy Impact Dashboard Screenshot](/images/posts/placeholder.svg)
-*[View dashboard screenshot on Substack →](https://tomwalczak.substack.com/p/making-policy-costs-personal-with)*
+![Policy Impact Dashboard Screenshot](/images/posts/policy-impact-dashboard.png)
 
 Using credible explanations grounded in facts, AI can help voters understand whether the policies they support align with their values — or rethink their values if they find that the cost-benefit doesn't add up!
 
@@ -29,8 +28,7 @@ Further down, a news feed features energy-focused stories, each with suggested a
 
 AI is really good at drafting high-quality emails, but here's the key feature — the AI first generates the draft after the user selects which personalized talking points to emphasize.
 
-![News feed demo](/images/posts/placeholder.svg)
-*[View demo GIFs on Substack →](https://tomwalczak.substack.com/p/making-policy-costs-personal-with)*
+![News feed demo](/images/posts/policy-impact-news-feed.gif)
 
 The project is still in an experimental stage and many details may change in the coming weeks/months!
 

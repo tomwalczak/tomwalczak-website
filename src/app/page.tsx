@@ -52,6 +52,13 @@ const socialLinks = [
 
 const featuredPosts = [
   {
+    title: "The AI Debate Is Full of Fake Agreement",
+    description:
+      'Is "PhD-level AI" even a thing? Is "sycophantic" AI dangerous? And are the AI labs close to achieving "recursive self-improvement"?',
+    date: "Jun 3, 2026",
+    slug: "the-ai-debate-is-full-of-fake-agreement",
+  },
+  {
     title: "Can AI Teach Itself Superhuman Persuasion? Introducing Open Debate",
     description:
       'I asked AI agents to debate "therapy culture." Five rounds later, both sides were calling for a violent communist revolution.',
@@ -70,12 +77,6 @@ const featuredPosts = [
     description: 'How to find truth in the age of "podcastistan"',
     date: "Jun 26, 2025",
     slug: "what-200-ai-debates-taught-me-about-truth-finding",
-  },
-  {
-    title: "AI is Like Waking Up with $100 Million in the Bank",
-    description: "So you have a superpower, now what?",
-    date: "Jun 16, 2025",
-    slug: "ai-is-like-waking-up-with-100-million",
   },
 ];
 
