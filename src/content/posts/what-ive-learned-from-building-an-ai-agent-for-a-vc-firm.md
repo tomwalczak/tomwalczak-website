@@ -68,6 +68,8 @@ Pitch decks arrive in various formats (PDF, PowerPoint, or none at all—sometim
 
 - **Multi-Company Splits:** If the inbound email or deck contains details on multiple startups, the AI separates them out, generating individual scores.
 
+![The AI scoring and flagging incoming deals against the firm's criteria](/images/posts/blumberg-scoring.gif)
+
 > *We learned it's important to build an end-to-end workflow and let real users test it early, even if the prototype is rough. We used evaluation-driven development and regression testing. We had about 200 pitch decks with known outcomes ("yes," "no," or "pass") and used them to quickly measure whether changes we made to the AI's prompts or criteria improved performance. This also helped us clarify what the firm's criteria actually are—like the definition of a "technical founder."*
 
 ### 4. Human Review & CRM Integration

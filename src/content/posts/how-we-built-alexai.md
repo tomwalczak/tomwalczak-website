@@ -30,6 +30,8 @@ We're working toward making AlexAI capable of answering questions as Alex would.
 
 AlexAI required access to all of Alex's work to function at its best, including his book, Fossil Future, blog posts, lectures, Q&A sessions, and congressional testimonies. We refer to this comprehensive collection of Alex's work as AlexAI's Knowledge Base.
 
+![The sources that make up AlexAI's knowledge base](/images/posts/alexai-knowledge-sources.png)
+
 There are two ways to create an AI expert chatbot:
 
 1. Training or fine-tuning a custom AI model on the knowledge base.
@@ -49,7 +51,11 @@ We opted against a custom model for AlexAI. Though conventional wisdom often rec
 
 We used dynamic prompting with multiple large language models (LLMs) to program AlexAI. This method involves constructing a prompt with relevant contextual information, which is then fed into an LLM.
 
+![AlexAI's dynamic prompting (RAG) architecture](/images/posts/alexai-dynamic-prompting.png)
+
 At the start of the prompt, which we feed into an LLM, we establish a set of principles and the general worldview that embodies Alex's perspective.
+
+![The principles and worldview that anchor AlexAI's prompts](/images/posts/alexai-principles.png)
 
 Most importantly, it outlines how he conceptualizes problems and frames the primary issues. The original idea for this approach came from the Constitutional AI paper and has worked well for AlexAI.
 
@@ -76,6 +82,8 @@ We have taken extra steps to combat this method's limitations:
 ## "Thinking out loud" to answer tricky questions
 
 Before generating a response to the user's question, we run an additional, dedicated prompt to evaluate the user's message to determine the optimal reply based on the conversation history and any relevant sources identified. Essentially, we encourage the model to first "think out loud" before answering.
+
+![AlexAI "thinking out loud" before answering a tricky question](/images/posts/alexai-thinking-out-loud.png)
 
 This "thinking out loud" step helps with several scenarios:
 
