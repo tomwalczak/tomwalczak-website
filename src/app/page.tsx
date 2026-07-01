@@ -104,8 +104,8 @@ export default function Home() {
       <div className="container max-w-4xl mx-auto px-4 py-16">
         {/* Hero Section */}
       <section className="mb-16">
-        <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-8 mb-8">
-          <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shrink-0">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
+          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden shrink-0">
             <Image
               src="/profile.jpg"
               alt="Tom Walczak"
@@ -115,97 +115,85 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="text-center sm:text-left">
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mb-2">
-              Hi, I&apos;m Tom
-            </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground">
-              AI Engineer
+          <div className="flex-1 text-center sm:text-left">
+            <p className="mb-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+              I&apos;m an AI engineer. I build advanced AI systems for clients
+              across VC, media, education, finance, and energy.
             </p>
+
+            <ul className="mb-5 space-y-1.5 list-disc pl-5 text-left text-sm text-muted-foreground">
+              <li>
+                I&apos;m Head of AI to Alex Epstein, and I run my own studio, TW
+                Consulting.
+              </li>
+              <li>
+                I advise engineering teams and help them make their AIs
+                production-ready, and I run audits of AI and machine-learning
+                systems.
+              </li>
+              <li>I have a degree in Computer Science.</li>
+              <li>I previously founded and sold a startup, EventIgnite.</li>
+            </ul>
+
+            <p className="mb-3 text-sm text-muted-foreground">
+              <Link href="/work" className="underline hover:text-foreground">
+                See my work and get in touch →
+              </Link>
+            </p>
+
+            <p className="mb-4 text-sm text-muted-foreground hidden sm:block">
+              Follow me on{" "}
+              <a
+                href="https://tomwalczak.substack.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-foreground"
+              >
+                Substack
+              </a>
+              ,{" "}
+              <a
+                href="https://x.com/tom_walchak"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-foreground"
+              >
+                X
+              </a>
+              , or{" "}
+              <a
+                href="https://linkedin.com/in/tom-walczak"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-foreground"
+              >
+                LinkedIn
+              </a>
+              .
+            </p>
+
+            <div className="flex items-center justify-center sm:justify-start gap-3">
+              {socialLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <Button key={link.name} variant="outline" size="icon" asChild>
+                    <a
+                      href={link.href}
+                      target={link.href.startsWith("http") ? "_blank" : undefined}
+                      rel={
+                        link.href.startsWith("http")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      aria-label={link.name}
+                    >
+                      <Icon className="h-4 w-4" />
+                    </a>
+                  </Button>
+                );
+              })}
+            </div>
           </div>
-        </div>
-
-        <ul className="mb-4 space-y-2 list-disc pl-5 text-sm sm:text-base text-muted-foreground">
-          <li>I build advanced AI systems that work in production.</li>
-          <li>
-            I help teams take existing AIs that &ldquo;almost work&rdquo; across
-            the line.
-          </li>
-          <li>
-            I&apos;ve built production AI systems for clients across VC, media,
-            education, finance, and energy.
-          </li>
-          <li>
-            I take full ownership of every project, and I have a small team of
-            engineers who support larger AI systems in production.
-          </li>
-        </ul>
-
-        <p className="text-sm text-muted-foreground mb-4">
-          I&apos;m Head of AI to Alex Epstein, and I run TW Consulting. I also
-          run external audits of AI and machine-learning systems. I have a
-          degree in computer science and have been building AI systems since
-          2020. Previously, I founded and sold a software and media startup,
-          EventIgnite.
-        </p>
-
-        <p className="text-sm text-muted-foreground mb-4 text-center sm:text-left">
-          <Link href="/work" className="underline hover:text-foreground">
-            See my work and get in touch →
-          </Link>
-        </p>
-
-        <p className="text-sm text-muted-foreground mb-4 hidden sm:block">
-          Follow me on{" "}
-          <a
-            href="https://tomwalczak.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-foreground"
-          >
-            Substack
-          </a>
-          ,{" "}
-          <a
-            href="https://x.com/tom_walchak"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-foreground"
-          >
-            X
-          </a>
-          , or{" "}
-          <a
-            href="https://linkedin.com/in/tom-walczak"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-foreground"
-          >
-            LinkedIn
-          </a>
-          .
-        </p>
-
-        <div className="flex items-center justify-center sm:justify-start gap-3">
-          {socialLinks.map((link) => {
-            const Icon = link.icon;
-            return (
-              <Button key={link.name} variant="outline" size="icon" asChild>
-                <a
-                  href={link.href}
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                  rel={
-                    link.href.startsWith("http")
-                      ? "noopener noreferrer"
-                      : undefined
-                  }
-                  aria-label={link.name}
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              </Button>
-            );
-          })}
         </div>
       </section>
 
