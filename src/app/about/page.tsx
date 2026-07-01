@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About | Tom Walczak",
   description:
-    "AI Engineer | Head of AI at Alex Epstein. Building truth-seeking AI that stress-tests arguments and surfaces counter-arguments. Based in London.",
+    "Tom Walczak is an AI engineer who builds advanced AI systems for clients across VC, media, education, finance, and energy, and is Head of AI to Alex Epstein.",
   alternates: {
     canonical: "/about",
   },
@@ -28,8 +29,8 @@ export default function AboutPage() {
           />
           <div className="flex flex-col justify-center">
             <p className="text-lg mb-4">
-              I build AI systems that stress-test arguments and surface
-              counter-arguments. Based in London.
+              I&apos;m an AI engineer. I build advanced AI systems for clients
+              across VC, media, education, finance, and energy.
             </p>
             <p className="text-muted-foreground mb-4">
               I&apos;m especially interested in the intersection of epistemology
@@ -38,27 +39,46 @@ export default function AboutPage() {
               counter-arguments.
             </p>
             <p className="text-muted-foreground">
-              Currently: Head of AI at Alex Epstein.
+              Currently: Head of AI to Alex Epstein, and I run TW Consulting.
             </p>
           </div>
         </div>
 
         <Separator className="my-8" />
 
-        <h2>Background</h2>
+        <h2>What I build</h2>
         <p>
-          I&apos;ve been building AI systems for the past few years — knowledge
-          bases, research pipelines, and tools that help people think through
-          complex questions. Before that, I built and sold a startup
-          (EventIgnite), which gave me an appreciation for building things
-          people actually want to use.
+          I build advanced AI systems that work in production, and I help teams
+          take existing AIs that &ldquo;almost work&rdquo; across the line. I
+          take full ownership of every project, and I have a small team of
+          engineers who support larger AI systems in production.
         </p>
         <p>
-          The thread through my work is verification and stress-testing. Whether
-          it&apos;s building AI that cites its sources, debate systems that
-          surface counter-arguments, or research tools that show their work —
-          the goal is always to give people confidence that claims have been
-          properly examined.
+          I&apos;m Head of AI to Alex Epstein, where I build AlexAI, a public AI
+          energy and climate expert grounded in Alex&apos;s own work; AlexAI
+          Pro, a more powerful, private version for internal users and policy
+          makers; and a few other internal products for Alex and his team.
+        </p>
+        <p>
+          I also run external audits of AI and machine-learning systems,
+          reviewing architecture, data pipelines, and evaluation
+          instrumentation.
+        </p>
+        <p>
+          If you have an AI system you want built or audited,{" "}
+          <Link href="/work">see my work</Link> and get in touch to see if
+          we&apos;re the right fit.
+        </p>
+
+        <Separator className="my-8" />
+
+        <h2>Background</h2>
+        <p>
+          I have a degree in computer science and have been building AI systems
+          since 2020 — knowledge bases, research pipelines, agents, and the
+          evaluation tooling that makes them reliable. Before that, I founded
+          and sold a software and media startup, EventIgnite, which gave me an
+          appreciation for building things people actually want to use.
         </p>
 
         <Separator className="my-8" />

@@ -20,6 +20,7 @@ const Substack = ({ className }: { className?: string }) => (
 );
 
 const navigation = [
+  { name: "Work", href: "/work" },
   { name: "Posts", href: "/blog" },
   { name: "About", href: "/about" },
 ];

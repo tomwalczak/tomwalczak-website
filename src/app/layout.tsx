@@ -13,16 +13,16 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://tomwalczak.com"),
   title: {
-    default: "Tom Walczak | Building verifiable, truth-seeking AI agents",
+    default: "Tom Walczak | AI Engineer",
     template: "%s | Tom Walczak",
   },
-  description: "AI Engineer based in London. Building AI agents that verify their own outputs on complex, controversial topics.",
-  keywords: ["AI", "artificial intelligence", "truth-seeking AI", "AI agents", "debate AI", "fact-checking", "Tom Walczak"],
+  description: "AI engineer building advanced AI systems for clients across VC, media, education, finance, and energy. I run external audits of AI and machine-learning systems, and I'm Head of AI to Alex Epstein.",
+  keywords: ["AI", "artificial intelligence", "production AI systems", "AI agents", "AI engineering", "AI evaluation", "AI audits", "machine learning", "Tom Walczak"],
   authors: [{ name: "Tom Walczak", url: "https://tomwalczak.com" }],
   creator: "Tom Walczak",
   openGraph: {
     title: "Tom Walczak",
-    description: "Building verifiable, truth-seeking AI agents",
+    description: "I build advanced AI systems that work in production.",
     url: "https://tomwalczak.com",
     siteName: "Tom Walczak",
     type: "website",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tom Walczak",
-    description: "Building verifiable, truth-seeking AI agents",
+    description: "I build advanced AI systems that work in production.",
     creator: "@tom_walchak",
     site: "@tom_walchak",
   },

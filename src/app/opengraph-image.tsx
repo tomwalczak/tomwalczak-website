@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Tom Walczak - Building verifiable, truth-seeking AI agents";
+export const alt = "Tom Walczak - Head of AI to Alex Epstein";
 export const size = {
   width: 1200,
   height: 630,
@@ -72,7 +72,7 @@ export default async function Image() {
             marginBottom: "40px",
           }}
         >
-          Building verifiable, truth-seeking AI agents
+          Trustworthy AI systems that work in production
         </div>
 
         {/* Separator */}
@@ -95,7 +95,7 @@ export default async function Image() {
             lineHeight: 1.5,
           }}
         >
-          AI Engineer in London · Open Debate · AlexAI · tomwalczak.com
+          AI Engineer · Head of AI to Alex Epstein · tomwalczak.com
         </div>
       </div>
     ),

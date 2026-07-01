@@ -19,9 +19,9 @@ export async function GET() {
 
   const content = `# Tom Walczak
 
-> AI Engineer based in London. Building verifiable, truth-seeking AI agents that stress-test arguments, surface counter-arguments, and turn confusion into clarity.
+> AI Engineer. I build advanced AI systems for clients across VC, media, education, finance, and energy, and run external audits of AI and machine-learning systems. Head of AI to Alex Epstein and founder of TW Consulting.
 
-I'm Tom Walczak, Head of AI at Alex Epstein. I build AI systems that verify their reasoning on complex, controversial topics. My work focuses on making AI useful for intellectual work—not just generating text, but actually helping humans think better.
+I'm Tom Walczak, an AI engineer. I build advanced AI systems that work in production. I help teams take existing AIs that "almost work" across the line, and I've built production AI systems for clients across VC, media, education, finance, and energy. I take full ownership of every project, with a small team of engineers who support larger AI systems in production. I also run external audits of AI and machine-learning systems. I'm Head of AI to Alex Epstein and founder of TW Consulting. I have a degree in computer science and have been building AI systems since 2020. Previously, I founded and sold a software and media startup, EventIgnite.
 
 ## About
 
@@ -29,9 +29,13 @@ I'm Tom Walczak, Head of AI at Alex Epstein. I build AI systems that verify thei
 
 ## Projects
 
-- [Open Debate](https://github.com/tomwalczak/open-debate): Open-source AI debate arena where language models argue opposing viewpoints, get judged, and learn from their losses. Recursive self-improvement for AI debaters.
-- [Argument Analyzer](https://github.com/tomwalczak/realtime-argument-analyzer): Real-time argument analysis with dual AI agents—Steelman surfaces the strongest version, Counter shows objections.
-- [AlexAI](https://alexepstein.ai): Conversational AI embodying energy expert Alex Epstein's thinking. 900+ indexed sound bites from Fossil Future and The Moral Case for Fossil Fuels.
+- [AlexAI](https://alexepstein.ai): A free public AI that answers energy, climate, and environment questions, based on Alex Epstein's work.
+- [AlexAI Pro](https://pro.alexepstein.ai): The world's most powerful energy AI. Combines frontier-model reasoning with Alex Epstein's method of thinking to generate talking points, op-eds, policy proposals, lobbying plans, and news analysis.
+- [Energenius](https://tomwalczak.com/work): An AI news engine for energy and climate that finds, ranks, and de-duplicates the news and tracks federal energy legislation.
+- [AmeshAI](https://amesh.ai): An AI built on the work of Dr. Amesh Adalja, a Johns Hopkins physician and biosecurity expert.
+- [NCEA AI](https://tomwalczak.com/work): A research agent built into the National Center for Energy Analytics website.
+- [BlumbergAI](https://tomwalczak.com/blog/what-ive-learned-from-building-an-ai-agent-for-a-vc-firm): An AI deal-screening agent built for Blumberg Capital, an early-stage VC firm.
+- [Open Debate](https://github.com/tomwalczak/open-debate): Open-source AI debate arena where models argue opposing viewpoints, get judged, and improve between rounds.
 
 ## Writing
 

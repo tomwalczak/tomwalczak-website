@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Twitter, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import Script from "next/script";
+import { SelectedWork } from "@/components/selected-work";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -11,19 +11,32 @@ const jsonLd = {
   name: "Tom Walczak",
   url: "https://tomwalczak.com",
   image: "https://tomwalczak.com/profile.jpg",
-  jobTitle: "Head of AI",
+  jobTitle: "AI Engineer",
   worksFor: {
     "@type": "Organization",
-    name: "Alex Epstein",
+    name: "TW Consulting",
+    description:
+      "Builds advanced AI systems for clients across VC, media, education, finance, and energy.",
+    url: "https://tomwalczak.com",
   },
-  description: "AI Engineer | Head of AI at Alex Epstein. Building truth-seeking AI that stress-tests arguments and surfaces counter-arguments. Based in London.",
+  description:
+    "Tom Walczak is an AI engineer who builds advanced AI systems for clients across VC, media, education, finance, and energy. He runs external audits of AI and machine-learning systems, and is Head of AI to Alex Epstein.",
   sameAs: [
     "https://github.com/tomwalczak",
     "https://x.com/tom_walchak",
     "https://linkedin.com/in/tom-walczak",
     "https://tomwalczak.substack.com",
   ],
-  knowsAbout: ["Artificial Intelligence", "AI Agents", "Machine Learning", "Debate Systems", "Fact-checking"],
+  knowsAbout: [
+    "Production-ready AI systems",
+    "AI agents",
+    "Retrieval-augmented generation",
+    "AI evaluation and verification",
+    "AI and machine-learning system audits",
+    "LLM application engineering",
+    "Energy and climate policy",
+    "Truth-seeking AI",
+  ],
 };
 
 // Custom Substack icon (Lucide doesn't have one)
@@ -107,20 +120,39 @@ export default function Home() {
               Hi, I&apos;m Tom
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground">
-              Building verifiable, truth-seeking AI agents
+              AI Engineer
             </p>
           </div>
         </div>
 
-        <blockquote className="border-l-2 border-primary pl-4 text-muted-foreground mb-4 text-sm sm:text-base">
-          I&apos;m building AI agents that verify their reasoning on complex,
-          controversial questions — surfacing counter-arguments, stress-testing
-          logic, and turning confusion into clarity. This will 100x intellectual
-          work and make real-time fact-checking possible.
-        </blockquote>
+        <ul className="mb-4 space-y-2 list-disc pl-5 text-sm sm:text-base text-muted-foreground">
+          <li>I build advanced AI systems that work in production.</li>
+          <li>
+            I help teams take existing AIs that &ldquo;almost work&rdquo; across
+            the line.
+          </li>
+          <li>
+            I&apos;ve built production AI systems for clients across VC, media,
+            education, finance, and energy.
+          </li>
+          <li>
+            I take full ownership of every project, and I have a small team of
+            engineers who support larger AI systems in production.
+          </li>
+        </ul>
+
+        <p className="text-sm text-muted-foreground mb-4">
+          I&apos;m Head of AI to Alex Epstein, and I run TW Consulting. I also
+          run external audits of AI and machine-learning systems. I have a
+          degree in computer science and have been building AI systems since
+          2020. Previously, I founded and sold a software and media startup,
+          EventIgnite.
+        </p>
 
         <p className="text-sm text-muted-foreground mb-4 text-center sm:text-left">
-          I&apos;m based in London, UK.
+          <Link href="/work" className="underline hover:text-foreground">
+            See my work and get in touch →
+          </Link>
         </p>
 
         <p className="text-sm text-muted-foreground mb-4 hidden sm:block">
@@ -177,126 +209,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What I'm Building Section */}
-      <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6">What I&apos;m Building</h2>
-
-        <div className="space-y-8">
-          <div className="border border-border rounded-lg p-6">
-            <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold">Open Debate</h3>
-              <Badge variant="secondary">Open Source</Badge>
-            </div>
-            <p className="text-muted-foreground mb-4">
-              An AI debate arena where language models argue opposing viewpoints,
-              get judged, and learn from their losses. Run debates that would
-              never happen IRL — people who refuse to engage, won&apos;t share a
-              stage, or are ideologically incompatible.
-            </p>
-            <ul className="text-sm text-muted-foreground space-y-1 mb-4">
-              <li>• Recursive self-improvement — debaters reflect and evolve between rounds</li>
-              <li>• Minimal &quot;vanilla&quot; prompts to surface raw model behavior</li>
-              <li>• Human-in-the-loop coaching mode</li>
-              <li>• CLI-first, designed for experimentation</li>
-            </ul>
-            <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://github.com/tomwalczak/open-debate"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on GitHub <ExternalLink className="ml-2 h-3 w-3" />
-              </a>
-            </Button>
-          </div>
-
-          <div className="border border-border rounded-lg p-6">
-            <div className="flex items-center gap-2 mb-2">
-              <h3 className="text-xl font-semibold">Argument Analyzer</h3>
-              <Badge variant="secondary">Open Source</Badge>
-            </div>
-            <p className="text-muted-foreground mb-4">
-              Real-time argument analysis as you write. Two AI agents work in
-              the background: Steelman surfaces the strongest version of your
-              argument, Counter shows the objections your opponents will raise.
-            </p>
-            <ul className="text-sm text-muted-foreground space-y-1 mb-4">
-              <li>• Feedback appears as you write, no button to click</li>
-              <li>• Click feedback to jump to the relevant passage</li>
-              <li>• Chat assistant for improving specific sections</li>
-            </ul>
-            <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://github.com/tomwalczak/realtime-argument-analyzer"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View on GitHub <ExternalLink className="ml-2 h-3 w-3" />
-              </a>
-            </Button>
-          </div>
-
-          <div className="border border-border rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-2">AlexAI</h3>
-            <p className="text-muted-foreground mb-4">
-              Public conversational AI that explains energy and climate issues
-              through Alex Epstein&apos;s lens. Built on his books, articles,
-              and decades of published work.
-            </p>
-            <ul className="text-sm text-muted-foreground space-y-1 mb-4">
-              <li>• Ask questions about energy policy, climate, and human flourishing</li>
-              <li>• Answers grounded in Alex&apos;s analytical framework</li>
-              <li>• Free to use</li>
-            </ul>
-            <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://alexepstein.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Try AlexAI <ExternalLink className="ml-2 h-3 w-3" />
-              </a>
-            </Button>
-          </div>
-
-          <div className="border border-border rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-2">AlexAI Pro</h3>
-            <p className="text-muted-foreground mb-4">
-              Research and writing platform for energy policy advocates. Runs
-              multi-step workflows that search Alex&apos;s knowledge base, crawl
-              web sources, and produce structured documents.
-            </p>
-            <ul className="text-sm text-muted-foreground space-y-1 mb-4">
-              <li>• 9 document tools: talking points, policy briefs, op-eds, influence plans</li>
-              <li>• Real-time search streaming — watch the AI research</li>
-              <li>• Cited sources from knowledge base, government data, and web</li>
-            </ul>
-            <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://pro.alexepstein.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn more <ExternalLink className="ml-2 h-3 w-3" />
-              </a>
-            </Button>
-          </div>
-
-          <div className="border border-border rounded-lg p-6">
-            <h3 className="text-xl font-semibold mb-2">Blumberg AI</h3>
-            <p className="text-muted-foreground mb-4">
-              Built an AI agent for Blumberg Capital that screens incoming pitch
-              decks, scores deals against investment criteria, and syncs with
-              the CRM — making the VC process faster and more founder-friendly.
-            </p>
-            <Button variant="outline" size="sm" asChild>
-              <Link href="/blog/what-ive-learned-from-building-an-ai-agent-for-a-vc-firm">
-                Read the case study <ExternalLink className="ml-2 h-3 w-3" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Selected Work Section */}
+      <SelectedWork />
 
       {/* Recent Writing Section */}
       <section className="mb-16">
@@ -335,7 +249,7 @@ export default function Home() {
 
       {/* Current Role */}
       <section className="text-center text-muted-foreground">
-        <p>Head of AI at Alex Epstein | AI Consultant</p>
+        <p>Head of AI to Alex Epstein · TW Consulting</p>
       </section>
       </div>
     </>
